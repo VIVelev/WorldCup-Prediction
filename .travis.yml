@@ -4,7 +4,5 @@ language:
 os:
   - osx
   - linux
-python:
-  - 3.6.5
 notifications:
   - email: false
