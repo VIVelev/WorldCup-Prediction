@@ -1,0 +1,10 @@
+language:
+  - python
+  - node_js
+os:
+  - osx
+  - linux
+python:
+  - 3.6
+notifications:
+  - email: false
