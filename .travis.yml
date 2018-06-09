@@ -5,6 +5,9 @@ os:
   - osx
   - linux
 python:
-  - 3.6.5
+  - "3.4.3"
+script:
+  - cd ./test
+  - python test.py
 notifications:
   - email: false
