@@ -1,12 +1,229 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Test</title>
-</head>
-<body>
-    This is a test
-</body>
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>World Cup Prediction</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="/static/assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+
+		<style>
+			.flag{
+				/* border: 1px solid gray; */
+				margin-left: 20px;
+				width: 30px;
+			}
+		</style>
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<span class="logo"><img src="/static/images/logo.svg" alt="" /></span>
+						<h1>World Cup Prediction</h1>
+						<p>Изкуствен интелект предсказва резултатите от световното първенство по футбол.<br>
+							Информация за мачовете <a href="information.html">тук</a></p>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<!-- <li><a href="#1" class="active">Русия - Египет</a></li>
+							<li><a href="#2">Русия - Египет</a></li> -->
+							{% for i, match in enumerate(matches) %}
+								<li><a href="#{{i+1}}" {% if i == 0 %}class="active"{% endif %}>{{ match.home }} - {{ match.away }}</a></li>
+							{% endfor %}
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+                        
+						<!-- Introduction -->
+						{% for i, match in enumerate(matches) %}
+						<section id="{{i+1}}" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>{{ match.home }} - {{ match.away }}</h2>
+										</header>
+										<div class="table-wrapper">
+											<table class="alt">
+												<thead>
+													<tr>
+														<th>Дата</th>
+														<th>Група</th>
+														<th>Домакин</th>
+														<th>Гост</th>
+														<th>За Домакин</th>
+														<th>За Равенство</th>
+														<th>За Гост</th>                                                 
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>{{ match.date.strftime("%d.%m.%Y") }}г.</td>
+														<td>{{ match.group }}</td>
+														<td>{{ match.home }} <img src="http://flags.fmcdn.net/data/flags/w1160/{{ country_codes[match.home] }}.png" class="flag"></td>
+														<td>{{ match.away }} <img src="http://flags.fmcdn.net/data/flags/w1160/{{ country_codes[match.away] }}.png" class="flag"></td>
+														<td style="color: {% if match.prob_home >= 50 %} green {% else %} red {% endif %}">{{ match.prob_home }}</td>
+														<td style="color: {% if match.prob_draw >= 50 %} green {% else %} red {% endif %}">{{ match.prob_draw }}</td>
+														<td style="color: {% if match.prob_away >= 50 %} green {% else %} red {% endif %}">{{ match.prob_away }}</td>                                                        
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="table-wrapper">
+											<table class="alt">
+												<thead>
+													<tr>
+														<th>Алгоритъм</th>
+														<th>За Домакин</th>
+														<th>За Равенство</th>
+														<th>За Гост</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Невронна мрежа</td>
+														<td>{{ match.ml_predict_home }}%</td>
+														<td>{{ match.ml_predict_draw }}%</td>
+														<td>{{ match.ml_predict_away }}%</td>
+													</tr>
+													<tr>
+														<td>Средни голове от предишни мачове</td>
+														<td>{{ match.avg_goals_home }}</td>
+														<td>-</td>
+														<td>{{ match.avg_goals_away }}</td>
+													</tr>
+													<tr>
+														<td>Положителни постове в Twitter</td>
+														<td>{{ match.twitter_posts_home }}</td>
+														<td>{{ match.twitter_posts_draw }}</td>
+														<td>{{ match.twitter_posts_away }}</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</section>
+						{% endfor %}
+                        
+						<!-- Introduction -->
+						<section id="2" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>Русия - Египет</h2>
+										</header>
+										<div class="table-wrapper">
+											<table class="alt">
+												<thead>
+													<tr>
+														<th>Дата</th>
+														<th>Група</th>
+														<th>Домакин</th>
+														<th>Гост</th>
+														<th>За Домакин</th>
+														<th>За Равенство</th>
+														<th>За Гост</th>                                                 
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>14.06.2018г.</td>
+														<td>A</td>
+														<td>Русия <img src="http://flags.fmcdn.net/data/flags/w1160/ru.png" class="flag"></td>
+														<td>Египет <img src="http://flags.fmcdn.net/data/flags/w1160/eg.png" class="flag"></td>
+														<td style="color:green">80%</td>
+														<td style="color:red">10%</td>
+														<td style="color:red">10%</td>                                                        
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="table-wrapper">
+											<table class="alt">
+												<thead>
+													<tr>
+														<th>Алгоритъм</th>
+														<th>За Домакин</th>
+														<th>За Равенство</th>
+														<th>За Гост</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Невронна мрежа</td>
+														<td>60%</td>
+														<td>10%</td>
+														<td>30%</td>
+													</tr>
+													<tr>
+														<td>Средни голове от предишни мачове</td>
+														<td>1.5</td>
+														<td>-</td>
+														<td>1</td>
+													</tr>
+													<tr>
+														<td>Положителни постове в Twitter</td>
+														<td>40</td>
+														<td>10</td>
+														<td>20</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</section>
+                        
+                </div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<h2>Правила за ползване</h2>
+							<p>Създателите на сайта не носят отговорност за резултати, различни от прогнозираните.</p>	
+						</section>
+						<section>
+							<h2>Контакти</h2>
+							<dl class="alt">
+								<dt>Email</dt>
+								<dd><a href="#">worldcupprediction@gmail.com</a></dd>
+							</dl>
+							<!-- <ul class="actions">
+								<li><a href="generic.html" class="button">Научете повече</a></li>
+							</ul> -->
+							<!-- <ul class="icons">
+								<li><a href="#" class="icon fa-twitter alt"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon fa-github alt"><span class="label">GitHub</span></a></li>
+							</ul> -->					
+						</section>
+						<p class="copyright">&copy; Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/static/assets/js/jquery.min.js"></script>
+			<script src="/static/assets/js/jquery.scrollex.min.js"></script>
+			<script src="/static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="/static/assets/js/skel.min.js"></script>
+			<script src="/static/assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="/static/assets/js/main.js"></script>
+
+	</body>
 </html>

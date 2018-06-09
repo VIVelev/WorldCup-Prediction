@@ -4,16 +4,7 @@ from pprint import pprint
 from datetime import datetime, date, timedelta
 import re
 
-groups = [
-    "A",
-    "B",
-    "C",
-    "D",
-    "E",
-    "F",
-    "G",
-    "H"
-]
+from constants import groups
 
 class Match:
     def __init__(self, home, away, date, time, group):
@@ -23,9 +14,9 @@ class Match:
         self.time = time
         self.group = group
 
-        self.prob_home = 50
-        self.prob_away = 50
-        self.prob_draw = 0
+        self.prob_home = 60
+        self.prob_away = 10
+        self.prob_draw = 30
 
         self.ml_predict_home = 60
         self.ml_predict_away = 10
