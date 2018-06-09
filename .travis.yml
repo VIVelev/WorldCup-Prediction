@@ -4,5 +4,10 @@ language:
 os:
   - osx
   - linux
+python:
+  - "3.4"
+script:
+  - cd ./test
+  - python test.py
 notifications:
   - email: false
