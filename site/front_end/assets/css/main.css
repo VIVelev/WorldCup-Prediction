@@ -1621,6 +1621,10 @@
 		}
 
 	}
+	/* body {
+		background-color: #935d8c;
+		background-image: url("images/overlay.png"), -webkit-linear-gradient(40deg, #4c6953 30%, #9c5c5c 70%);
+	} */
 
 	body {
 		background-color: #935d8c;
