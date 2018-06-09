@@ -1,7 +1,7 @@
 from lxml import html
 import requests
 from pprint import pprint
-from datetime import datetime, date, timedelta
+import datetime
 import re
 
 from constants import groups
@@ -10,7 +10,7 @@ class Match:
     def __init__(self, home, away, date, time, group):
         self.home = home
         self.away = away
-        self.date = datetime.strptime(date, "%d %b %Y").date() # eg. "07 Jun 2018"
+        self.date = datetime.datetime.strptime(date, "%d %b %Y").date() # eg. "07 Jun 2018"
         self.time = time
         self.group = group
 
@@ -39,8 +39,7 @@ class Match:
         )
 
 def get_next_day_matches():
-    global date
-    tomorrow = date.today() + timedelta(days=7)
+    tomorrow = datetime.date.today() + datetime.timedelta(days=7)
     
     page = requests.get("http://www.fifa.com/worldcup/matches/")
     tree = html.fromstring(page.content)
