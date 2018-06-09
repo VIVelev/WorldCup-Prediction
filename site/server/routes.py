@@ -6,5 +6,8 @@ from constants import country_codes
 
 @app.route('/')
 def index():
-    matches = list(get_next_day_matches())
-    return render_template("index.html", matches=matches, enumerate=enumerate, country_codes=country_codes)
+    return render_template(
+        "index.html", 
+        matches=get_next_day_matches, 
+        enumerate=enumerate, 
+        country_codes=country_codes)
