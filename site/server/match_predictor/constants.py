@@ -43,7 +43,7 @@ TEAM_PLAYERS = {
     
     "Mexico": ["José de Jesús Corona", "Hugo Ayala", "Carlos Salcedo", "Rafael Márquez", "Diego Reyes", "Jonathan dos Santos", "Miguel Layún", "Marco Fabián", "Raúl Jiménez", "Giovani dos Santos", "Carlos Vela", "Alfredo Talavera", "Guillermo Ochoa", "Javier Hernández", "Héctor Moreno", "Héctor Herrera", "Jesús Manuel Corona", "Andrés Guardado", "Oribe Peralta", "Javier Aquino", "Edson Álvarez", "Hirving Lozano", "Jesús Gallardo"], 
     
-    "South Korea": ["Kim Seung-gyu", "Lee Yong", "Jung Seung-hyun", "Oh Ban-suk", "Yun Young-sun", "Park Joo-ho", "Son Heung-min", "Ju Se-jong", "Kim Shin-wook", "Lee Seung-woo", "Hwang Hee-chan", "Kim Min-woo", "Koo Ja-cheol", "Hong Chul", "Jung Woo-young", "Ki Sung-yueng", "Lee Jae-sung", "Moon Seon-min", "Kim Young-gwon", "Jang Hyun-soo", "Kim Jin-hyeon", "Go Yo-han", "Cho Hyun-woo"], 
+    "Korea Republic": ["Kim Seung-gyu", "Lee Yong", "Jung Seung-hyun", "Oh Ban-suk", "Yun Young-sun", "Park Joo-ho", "Son Heung-min", "Ju Se-jong", "Kim Shin-wook", "Lee Seung-woo", "Hwang Hee-chan", "Kim Min-woo", "Koo Ja-cheol", "Hong Chul", "Jung Woo-young", "Ki Sung-yueng", "Lee Jae-sung", "Moon Seon-min", "Kim Young-gwon", "Jang Hyun-soo", "Kim Jin-hyeon", "Go Yo-han", "Cho Hyun-woo"], 
     
     "Sweden": ["Robin Olsen", "Mikael Lustig", "Victor Lindelöf", "Andreas Granqvist", "Martin Olsson", "Ludwig Augustinsson", "Sebastian Larsson", "Albin Ekdal", "Marcus Berg", "Emil Forsberg", "John Guidetti", "Karl-Johan Johnsson", "Gustav Svensson", "Filip Helander", "Oscar Hiljemark", "Emil Krafth", "Viktor Claesson", "Pontus Jansson", "Marcus Rohdén", "Ola Toivonen", "Jimmy Durmaz", "Isaac Kiese Thelin", "Kristoffer Nordfeldt"], 
     

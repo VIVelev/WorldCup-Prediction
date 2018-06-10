@@ -1,10 +1,12 @@
-from lxml import html
-import requests
-from pprint import pprint
 import datetime
 import re
+from pprint import pprint
+
+import requests
+from lxml import html
 
 from constants import groups
+
 
 class Match:
     def __init__(self, home="", away="", date="", time="", stage=""):

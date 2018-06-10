@@ -1,4 +1,4 @@
-import json
+import pickle
 
 from match_predictor.main import predict_proba
 from scraping import get_next_day_matches
@@ -13,7 +13,7 @@ for match in get_next_day_matches():
     match.prob_away = probs[2]
     match.prob_draw = probs[0]
 
-    matches.append(dict(match))
+    matches.append(match)
 
-with open("matches.json", "w") as matches_file:
-    matches_file.write(json.dumps(matches, indent=4))
+with open("matches.b", "wb") as f:
+    pickle.dump(matches, f)

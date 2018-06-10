@@ -1,6 +1,8 @@
+from pprint import pprint
+
 import requests
 from lxml import html
-from pprint import pprint
+
 from constants import country_codes
 
 page = requests.get("https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_squads")
