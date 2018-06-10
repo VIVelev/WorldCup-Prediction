@@ -33,7 +33,7 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul>
-							{% for i, match in enumerate(matches()) %}
+							{% for i, match in enumerate(matches) %}
 								<li><a href="#{{i+1}}" {% if i == 0 %}class="active"{% endif %}>{{ match.home }} - {{ match.away }}</a></li>
 							{% endfor %}
 						</ul>
@@ -43,7 +43,7 @@
 					<div id="main">
                         
 						<!-- Introduction -->
-						{% for i, match in enumerate(matches()) %}
+						{% for i, match in enumerate(matches) %}
 						<section id="{{i+1}}" class="main">
 								<div class="spotlight">
 									<div class="content">

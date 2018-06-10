@@ -1,1 +1,56 @@
-[]
+[
+    {
+        "date": "2018-06-17",
+        "home": "Costa Rica",
+        "away": "Serbia",
+        "time": "16:00",
+        "stage": "Group E",
+        "prob_home": 60,
+        "prob_away": 30,
+        "prob_draw": 10,
+        "ml_predict_home": 60,
+        "ml_predict_away": 10,
+        "ml_predict_draw": 30,
+        "avg_goals_home": 1.5,
+        "avg_goals_away": 1,
+        "twitter_posts_home": 40,
+        "twitter_posts_away": 20,
+        "twitter_posts_draw": 10
+    },
+    {
+        "date": "2018-06-17",
+        "home": "Germany",
+        "away": "Mexico",
+        "time": "18:00",
+        "stage": "Group F",
+        "prob_home": 60,
+        "prob_away": 30,
+        "prob_draw": 10,
+        "ml_predict_home": 60,
+        "ml_predict_away": 10,
+        "ml_predict_draw": 30,
+        "avg_goals_home": 1.5,
+        "avg_goals_away": 1,
+        "twitter_posts_home": 40,
+        "twitter_posts_away": 20,
+        "twitter_posts_draw": 10
+    },
+    {
+        "date": "2018-06-17",
+        "home": "Brazil",
+        "away": "Switzerland",
+        "time": "21:00",
+        "stage": "Group E",
+        "prob_home": 60,
+        "prob_away": 30,
+        "prob_draw": 10,
+        "ml_predict_home": 60,
+        "ml_predict_away": 10,
+        "ml_predict_draw": 30,
+        "avg_goals_home": 1.5,
+        "avg_goals_away": 1,
+        "twitter_posts_home": 40,
+        "twitter_posts_away": 20,
+        "twitter_posts_draw": 10
+    }
+]
