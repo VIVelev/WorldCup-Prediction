@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 
 __all__ = [
     "get_average_goals",
