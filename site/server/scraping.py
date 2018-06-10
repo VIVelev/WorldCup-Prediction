@@ -7,12 +7,12 @@ import re
 from constants import groups
 
 class Match:
-    def __init__(self, home, away, date, time, group):
+    def __init__(self, home, away, date, time, stage):
         self.home = home
         self.away = away
         self.date = datetime.datetime.strptime(date, "%d %b %Y").date() # eg. "07 Jun 2018"
         self.time = time
-        self.group = group
+        self.stage = "Group " + stage
 
         self.prob_home = 60
         self.prob_away = 10
@@ -30,12 +30,12 @@ class Match:
         self.twitter_posts_draw = 10
     
     def __repr__(self):
-        return "Group {group}: {home} vs {away} Playing on {date} at {time}".format(
+        return "{stage}: {home} vs {away} Playing on {date} at {time}".format(
             home=self.home,
             away=self.away,
             date=self.date.strftime("%d %b %Y"),
             time=self.time,
-            group=self.group
+            stage=self.stage
         )
 
 def get_next_day_matches():
@@ -67,7 +67,7 @@ def get_next_day_matches():
         if len(home) < 4 or len(away) < 4:
             continue
         
-        match = Match(home=home, away=away, date=date, time=time, group=group)
+        match = Match(home=home, away=away, date=date, time=time, stage=group)
         
         if match.date == tomorrow:
             yield match
