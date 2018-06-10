@@ -7,6 +7,7 @@ from .player_stats import find_player_stats
 from .constants import team_players
 
 __all__ = [
+    "get_nbest_scores",
     "predict_proba",
     "xgb_model",
     "stage_encoder",
@@ -22,6 +23,14 @@ with open(os.path.join(DIR, "../static/ml/stage_encoder.b"), "rb") as f:
 
 with open(os.path.join(DIR, "../static/ml/team_name_encoder.b"), "rb") as f:
     team_name_encoder = pickle.load(f)
+
+def get_nbest_scores(players, n=11):
+    scores = []
+    for player in players:
+        scores.append(find_player_stats(player)["Overall"])
+
+    scores.sort()
+    return scores[:n]
 
 def predict_proba(stage, attendance, home_team_name, away_team_name):
     feature_names = [
@@ -57,11 +66,10 @@ def predict_proba(stage, attendance, home_team_name, away_team_name):
     data.append(attendance)
 
     # Overall
+    home_players_scores = get_nbest_scores(home_team_players)
+    away_players_scores = get_nbest_scores(away_team_players)
     for i in range(11):
-        home_player_overall_score = find_player_stats(home_team_players[i])["Overall"]
-        away_player_overall_score = find_player_stats(away_team_players[i])["Overall"]
-
-        data.append(home_player_overall_score-away_player_overall_score)
+        data.append(home_players_scores[i] - away_players_scores[i])
 
     mean_goals = get_average_goals(home_team_name, away_team_name)
     # Mean Home Team Goals

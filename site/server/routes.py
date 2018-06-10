@@ -10,4 +10,5 @@ def index():
         "index.html", 
         matches=get_next_day_matches, 
         enumerate=enumerate, 
-        country_codes=country_codes)
+        country_codes=country_codes
+    )
