@@ -7,22 +7,7 @@ if __name__ == "__main__":
     print(
         predict_proba(
             "Group A", 4000,
-            "Brazil", [
-                "A. BECKER", "T. SILVA",
-                "MIRANDA", "GEROMEL",
-                "CASEMIRO", "D. COSTA",
-                "R. AUGUSTO", "NEYMAR JR",
-                "P. COUTINHO", "MARCELO",
-                "MARQUINHOS"
-            ],
-            "Germany", [
-                "NEUER", "HECTOR",
-                "HUMMELS", "KHEDIRA",
-                "DRAXLER", "KROOS",
-                "ÖZIL", "REUS",
-                "MÜLLER", "BOATENG",
-                "NEUER"
-            ]
+            "Brazil", "Germany"
         )
     )
     print("-"*30)

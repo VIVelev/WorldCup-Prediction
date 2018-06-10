@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>World Cup Prediction</title>
@@ -38,8 +33,6 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul>
-							<!-- <li><a href="#1" class="active">Русия - Египет</a></li>
-							<li><a href="#2">Русия - Египет</a></li> -->
 							{% for i, match in enumerate(matches()) %}
 								<li><a href="#{{i+1}}" {% if i == 0 %}class="active"{% endif %}>{{ match.home }} - {{ match.away }}</a></li>
 							{% endfor %}
@@ -78,7 +71,7 @@
 														<td>{{ match.away }} <img src="http://flags.fmcdn.net/data/flags/w1160/{{ country_codes[match.away] }}.png" class="flag"></td>
 														<td style="color: {% if match.prob_home >= 50 %} green {% else %} red {% endif %}">{{ match.prob_home }}</td>
 														<td style="color: {% if match.prob_draw >= 50 %} green {% else %} red {% endif %}">{{ match.prob_draw }}</td>
-														<td style="color: {% if match.prob_away >= 50 %} green {% else %} red {% endif %}">{{ match.prob_away }}</td>                                                        
+														<td style="color: {% if match.prob_away >= 50 %} green {% else %} red {% endif %}">{{ match.prob_away }}</td>                                                     
 													</tr>
 												</tbody>
 											</table>
@@ -87,30 +80,16 @@
 											<table class="alt">
 												<thead>
 													<tr>
-														<th>Алгоритъм</th>
+														<th>Статистика</th>
 														<th>За Домакин</th>
-														<th>За Равенство</th>
 														<th>За Гост</th>
 													</tr>
 												</thead>
 												<tbody>
 													<tr>
-														<td>Невронна мрежа</td>
-														<td>{{ match.ml_predict_home }}%</td>
-														<td>{{ match.ml_predict_draw }}%</td>
-														<td>{{ match.ml_predict_away }}%</td>
-													</tr>
-													<tr>
 														<td>Средни голове от предишни мачове</td>
 														<td>{{ match.avg_goals_home }}</td>
-														<td>-</td>
 														<td>{{ match.avg_goals_away }}</td>
-													</tr>
-													<tr>
-														<td>Положителни постове в Twitter</td>
-														<td>{{ match.twitter_posts_home }}</td>
-														<td>{{ match.twitter_posts_draw }}</td>
-														<td>{{ match.twitter_posts_away }}</td>
 													</tr>
 												</tbody>
 											</table>

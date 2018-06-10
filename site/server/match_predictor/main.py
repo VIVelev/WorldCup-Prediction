@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 from .mean_stats import get_average_goals
 from .player_stats import find_player_stats
+from .constants import team_players
 
 __all__ = [
     "predict_proba",
@@ -22,7 +23,7 @@ with open(os.path.join(DIR, "../static/ml/stage_encoder.b"), "rb") as f:
 with open(os.path.join(DIR, "../static/ml/team_name_encoder.b"), "rb") as f:
     team_name_encoder = pickle.load(f)
 
-def predict_proba(stage, attendance, home_team_name, home_team_players, away_team_name, away_team_players):
+def predict_proba(stage, attendance, home_team_name, away_team_name):
     feature_names = [
         "Stage", "Home Team Name", "Away Team Name",
         "Attendance",
@@ -39,6 +40,10 @@ def predict_proba(stage, attendance, home_team_name, home_team_players, away_tea
         "Player 11 Overall Diff",
         "Mean Home Team Goals", "Mean Away Team Goals"
     ]
+
+    # Add Team Players
+    home_team_players = team_players[home_team_name]
+    away_team_players = team_players[away_team_name]
 
     data = []
 
