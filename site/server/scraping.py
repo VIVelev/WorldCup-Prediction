@@ -7,10 +7,13 @@ import re
 from constants import groups
 
 class Match:
-    def __init__(self, home, away, date, time, stage):
+    def __init__(self, home="", away="", date="", time="", stage=""):
         self.home = home
         self.away = away
-        self.date = datetime.datetime.strptime(date, "%d %b %Y").date() # eg. "07 Jun 2018"
+        if date != "":
+            self.date = datetime.datetime.strptime(date, "%d %b %Y").date() # eg. "07 Jun 2018"
+        else:
+            self.date = datetime.date.today()
         self.time = time
         self.stage = "Group " + stage
 
@@ -37,6 +40,22 @@ class Match:
             time=self.time,
             stage=self.stage
         )
+    
+    def __iter__(self):
+        yield 'date', self.date.strftime("%Y-%m-%d")
+        for key, value in self.__dict__.items():
+            if key == 'date':
+                continue
+            yield key, value
+    
+    @classmethod
+    def from_dict(cls, dct):
+        obj = cls()
+        for key, value in dct.items():
+            setattr(obj, key, value)
+        obj.date = datetime.datetime.strptime(dct['date'], "%Y-%m-%d").date()
+        
+        return obj
 
 def get_next_day_matches():
     tomorrow = datetime.date.today() + datetime.timedelta(days=7)
