@@ -1,6 +1,7 @@
 import pandas as pd
 from math import sqrt
 import random
+import os
 
 __all__ = [
     "stats",
@@ -11,7 +12,7 @@ __all__ = [
     "find_player_stats",
 ]
 
-stats = pd.read_csv("/static/ml/PlayersStats.csv")
+stats = pd.read_csv(os.path.join(os.path.abspath(os.path.dirname(__file__)), '../static/ml/PlayersStats.csv'))
 
 def clean(x):
     x = x.lower().strip().split(" ")

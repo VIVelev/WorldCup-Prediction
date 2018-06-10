@@ -5,7 +5,7 @@ __all__ = [
 ]
 
 def get_average_goals(home, away):
-    wwmatches = pd.read_csv("/static/ml/wwmatches.csv")
+    wwmatches = pd.read_csv(os.path.join(os.path.abspath(os.path.dirname(__file__)), "../static/ml/wwmatches.csv"))
 
     avg_home = 0
     avg_away = 0
