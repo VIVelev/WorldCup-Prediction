@@ -1,7 +1,7 @@
+import os
+import random
 import pandas as pd
 from math import sqrt
-import random
-import os
 
 __all__ = [
     "stats",
@@ -12,7 +12,7 @@ __all__ = [
     "find_player_stats",
 ]
 
-stats = pd.read_csv(os.path.join(os.path.abspath(os.path.dirname(__file__)), '../static/ml/PlayersStats.csv'))
+stats = pd.read_csv(os.path.join(os.path.abspath(os.path.dirname(__file__)), "../static/ml/PlayersStats.csv"))
 
 def clean(x):
     x = x.lower().strip().split(" ")
@@ -73,7 +73,9 @@ def find_start_index(name):
     while i < len(stats) and name[0] > clean(stats.iloc[i]["Name"])[0]:
         i += jump_step
     
-    i -= jump_step
+    if i >= jump_step:
+        i -= jump_step
+
     return i
 
 def find_end_index(name):
@@ -83,8 +85,10 @@ def find_end_index(name):
     
     while i >= 0 and name[0] < clean(stats.iloc[i]["Name"])[0]:
         i -= jump_step
-    
-    i += jump_step
+
+    if i < len(stats)-jump_step:
+        i += jump_step
+
     return i
 
 def similarity_score(a, b):
@@ -103,7 +107,7 @@ def find_player_stats(name, debug=False):
     best_match_index = -1
     best_score = 0
             
-    for i in range(find_start_index(name), find_end_index(name)):         
+    for i in range(find_start_index(name), find_end_index(name)):      
         current_score = similarity_score(name, stats.iloc[i]["Name"])
         if current_score > best_score:
             best_score = current_score

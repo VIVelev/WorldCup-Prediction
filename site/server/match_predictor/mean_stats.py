@@ -1,13 +1,14 @@
-import pandas as pd
 import os
+import pandas as pd
 
 __all__ = [
     "get_average_goals",
+    "wwmatches",
 ]
 
-def get_average_goals(home, away):
-    wwmatches = pd.read_csv(os.path.join(os.path.abspath(os.path.dirname(__file__)), "../static/ml/wwmatches.csv"))
+wwmatches = pd.read_csv(os.path.join(os.path.abspath(os.path.dirname(__file__)), "../static/ml/wwmatches.csv"))
 
+def get_average_goals(home, away):
     avg_home = 0
     avg_away = 0
     n = 0
