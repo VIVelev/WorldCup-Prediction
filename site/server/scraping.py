@@ -7,7 +7,6 @@ from lxml import html
 
 from constants import groups
 
-
 class Match:
     def __init__(self, home="", away="", date="", time="", stage=""):
         self.home = home
@@ -19,20 +18,20 @@ class Match:
         self.time = time
         self.stage = "Group " + stage
 
-        self.prob_home = 60
-        self.prob_away = 10
-        self.prob_draw = 30
+        self.prob_home = 0
+        self.prob_away = 0
+        self.prob_draw = 0
 
-        self.ml_predict_home = 60
-        self.ml_predict_away = 10
-        self.ml_predict_draw = 30
+        self.ml_predict_home = 0
+        self.ml_predict_away = 0
+        self.ml_predict_draw = 0
 
-        self.avg_goals_home = 1.5
-        self.avg_goals_away = 1
+        self.avg_goals_home = 0
+        self.avg_goals_away = 0
 
-        self.twitter_posts_home = 40
-        self.twitter_posts_away = 20
-        self.twitter_posts_draw = 10
+        self.twitter_posts_home = 0
+        self.twitter_posts_away = 0
+        self.twitter_posts_draw = 0
     
     def __repr__(self):
         return "{stage}: {home} vs {away} Playing on {date} at {time}".format(
@@ -60,12 +59,10 @@ class Match:
         return obj
 
 def get_next_day_matches():
-    tomorrow = datetime.date.today() + datetime.timedelta(days=7)
+    tomorrow = datetime.date.today() + datetime.timedelta(days=4)
     
     page = requests.get("http://www.fifa.com/worldcup/matches/")
     tree = html.fromstring(page.content)
-
-    data = []
 
     matches = tree.find_class('fi-mu fixture')
     for match in matches:

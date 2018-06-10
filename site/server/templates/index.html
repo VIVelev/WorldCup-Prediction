@@ -55,7 +55,7 @@
 												<thead>
 													<tr>
 														<th>Дата</th>
-														<th>Група</th>
+														<th>Фаза</th>
 														<th>Домакин</th>
 														<th>Гост</th>
 														<th>За Домакин</th>
@@ -66,7 +66,7 @@
 												<tbody>
 													<tr>
 														<td>{{ match.date.strftime("%d.%m.%Y") }}г.</td>
-														<td>{{ match.group }}</td>
+														<td>{{ match.stage }}</td>
 														<td>{{ match.home }} <img src="http://flags.fmcdn.net/data/flags/w1160/{{ country_codes[match.home] }}.png" class="flag"></td>
 														<td>{{ match.away }} <img src="http://flags.fmcdn.net/data/flags/w1160/{{ country_codes[match.away] }}.png" class="flag"></td>
 														<td style="color: {% if match.prob_home >= 50 %} green {% else %} red {% endif %}">{{ match.prob_home }}</td>

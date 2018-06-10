@@ -73,12 +73,12 @@ def predict_proba(stage, attendance, home_team_name, away_team_name):
     for i in range(11):
         data.append(home_players_scores[i] - away_players_scores[i])
 
-    mean_goals = get_average_goals(home_team_name, away_team_name)
-    if mean_goals is list:
+    avg_goals = get_average_goals(home_team_name, away_team_name)
+    if avg_goals != 0:
         # Mean Home Team Goals
-        data.append(mean_goals[0])
+        data.append(avg_goals[0])
         # Mean Away Team Goals
-        data.append(mean_goals[1])
+        data.append(avg_goals[1])
     else:
         data.append(0.0)
         data.append(0.0)
