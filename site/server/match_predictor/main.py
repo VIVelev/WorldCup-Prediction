@@ -1,10 +1,12 @@
 import os
 import pickle
+
 import numpy as np
 import pandas as pd
+
+from .constants import TEAM_PLAYERS
 from .mean_stats import get_average_goals
 from .player_stats import find_player_stats
-from .constants import team_players
 
 __all__ = [
     "get_nbest_scores",
@@ -51,8 +53,8 @@ def predict_proba(stage, attendance, home_team_name, away_team_name):
     ]
 
     # Add Team Players
-    home_team_players = team_players[home_team_name]
-    away_team_players = team_players[away_team_name]
+    home_team_players = TEAM_PLAYERS[home_team_name]
+    away_team_players = TEAM_PLAYERS[away_team_name]
 
     data = []
 
@@ -72,10 +74,14 @@ def predict_proba(stage, attendance, home_team_name, away_team_name):
         data.append(home_players_scores[i] - away_players_scores[i])
 
     mean_goals = get_average_goals(home_team_name, away_team_name)
-    # Mean Home Team Goals
-    data.append(mean_goals[0])
-    # Mean Away Team Goals
-    data.append(mean_goals[1])
+    if mean_goals is list:
+        # Mean Home Team Goals
+        data.append(mean_goals[0])
+        # Mean Away Team Goals
+        data.append(mean_goals[1])
+    else:
+        data.append(0.0)
+        data.append(0.0)
 
     df = pd.DataFrame(columns=feature_names)
     data = pd.Series(data, index=feature_names)

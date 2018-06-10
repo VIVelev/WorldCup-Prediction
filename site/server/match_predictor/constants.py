@@ -1,4 +1,4 @@
-team_players = {
+TEAM_PLAYERS = {
     "Egypt": ["Essam El-Hadary", "Ali Gabr", "Ahmed Elmohamady", "Omar Gaber", "Sam Morsy", "Ahmed Hegazi", "Ahmed Fathy", "Tarek Hamed", "Marwan Mohsen", "Mohamed Salah", "Kahraba", "Ayman Ashraf", "Mohamed Abdel-Shafy", "Ramadan Sobhi", "Mahmoud Hamdy", "Sherif Ekramy", "Mohamed Elneny", "Shikabala", "Abdallah Said", "Saad Samir", "Trézéguet", "Amr Warda", "Mohamed El-Shenawy"], 
     
     "Russia": ["Igor Akinfeev", "Mário Fernandes", "Ilya Kutepov", "Sergei Ignashevich", "Andrei Semyonov", "Denis Cheryshev", "Daler Kuzyayev", "Yury Gazinsky", "Alan Dzagoev", "Fyodor Smolov", "Roman Zobnin", "Andrey Lunyov", "Fyodor Kudryashov", "Vladimir Granat", "Aleksei Miranchuk", "Anton Miranchuk", "Aleksandr Golovin", "Yuri Zhirkov", "Aleksandr Samedov", "Vladimir Gabulov", "Aleksandr Yerokhin", "Artem Dzyuba", "Igor Smolnikov"], 

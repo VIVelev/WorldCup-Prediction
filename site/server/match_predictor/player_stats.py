@@ -1,7 +1,8 @@
 import os
 import random
-import pandas as pd
 from math import sqrt
+
+import pandas as pd
 
 __all__ = [
     "stats",

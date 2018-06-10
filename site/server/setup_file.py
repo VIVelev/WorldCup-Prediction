@@ -1,4 +1,5 @@
 import json
+
 from match_predictor.main import predict_proba
 from scraping import get_next_day_matches
 
