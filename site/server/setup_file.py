@@ -7,10 +7,10 @@ from scraping import get_next_day_matches
 matches = []
 for match in get_next_day_matches():
     probs = predict_proba(
-        match.stage, 4000,
+        match.stage, 50_000,
         match.home, match.away
     )
-    avg_goals = get_average_goals(match.home, match.away)
+    avg_goals = get_average_goals(match.home, match.away, ignore_sides=True)
 
     match.prob_home = probs[1]
     match.prob_away = probs[2]
