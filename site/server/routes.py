@@ -12,9 +12,10 @@ with open("matches.b", "rb") as f:
 @app.route('/')
 def index():
     for match in matches:
-        match.prob_home = int(match.prob_home * 100)
-        match.prob_away = int(match.prob_away * 100)
-        match.prob_draw = int(match.prob_draw * 100)
+        if type(match.prob_home) is not int:
+            match.prob_home = int(match.prob_home * 100)
+            match.prob_away = int(match.prob_away * 100)
+            match.prob_draw = int(match.prob_draw * 100)
         
     return render_template(
         "index.html", 
