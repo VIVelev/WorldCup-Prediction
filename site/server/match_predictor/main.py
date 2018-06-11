@@ -1,10 +1,10 @@
 import os
 import pickle
+from pprint import pprint
 
 import numpy as np
 import pandas as pd
 
-from .constants import TEAM_PLAYERS
 from .mean_stats import get_average_goals
 from .player_stats import find_player_stats
 
@@ -16,20 +16,41 @@ __all__ = [
     "team_name_encoder",
 ]
 
+# # # SET CURRENT FILE DIR # # #
 DIR = os.path.abspath(os.path.dirname(__file__))
-with open(os.path.join(DIR, "../static/ml/xgb_model.b"), "rb") as f:
+
+# # # LOAD ML Utils # # #
+with open(os.path.join(DIR, "./ml_data/xgb_model.b"), "rb") as f:
     xgb_model = pickle.load(f)
 
-with open(os.path.join(DIR, "../static/ml/stage_encoder.b"), "rb") as f:
+with open(os.path.join(DIR, "./ml_data/stage_encoder.b"), "rb") as f:
     stage_encoder = pickle.load(f)
 
-with open(os.path.join(DIR, "../static/ml/team_name_encoder.b"), "rb") as f:
+with open(os.path.join(DIR, "./ml_data/team_name_encoder.b"), "rb") as f:
     team_name_encoder = pickle.load(f)
+# # # # # # # # # # # # #
 
-def get_nbest_scores(players, n=11):
+def get_nbest_scores(team_name, n=11):
+    with open(os.path.join(DIR, "./ml_data/team_players.b"), "rb") as f:
+        team_players = pickle.load(f)
+
+    players = team_players[team_name]
     scores = []
-    for player in players:
-        scores.append(find_player_stats(player)["Overall"])
+
+    # pprint(players)
+    for i in range(len(players)):
+        try:
+            scores.append(int(players[i][1]))
+            continue
+
+        except:
+            player_score = int(find_player_stats(players[i])["Overall"])
+            scores.append(player_score)
+            team_players[team_name][i] = [players[i], player_score]
+
+    # pprint(team_players)
+    with open(os.path.join(DIR, "./ml_data/team_players.b"), "wb") as f:
+        pickle.dump(team_players, f)
 
     scores.sort()
     return scores[:n]
@@ -52,10 +73,6 @@ def predict_proba(stage, attendance, home_team_name, away_team_name):
         "Mean Home Team Goals", "Mean Away Team Goals"
     ]
 
-    # Add Team Players
-    home_team_players = TEAM_PLAYERS[home_team_name]
-    away_team_players = TEAM_PLAYERS[away_team_name]
-
     data = []
 
     # Stage
@@ -68,8 +85,8 @@ def predict_proba(stage, attendance, home_team_name, away_team_name):
     data.append(attendance)
 
     # Overall
-    home_players_scores = get_nbest_scores(home_team_players)
-    away_players_scores = get_nbest_scores(away_team_players)
+    home_players_scores = get_nbest_scores(home_team_name)
+    away_players_scores = get_nbest_scores(away_team_name)
     for i in range(11):
         data.append(home_players_scores[i] - away_players_scores[i])
 

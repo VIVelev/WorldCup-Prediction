@@ -20,8 +20,8 @@ for match in get_next_day_matches():
         match.avg_goals_home = avg_goals[0]
         match.avg_goals_away = avg_goals[1]
     else:
-        match.avg_goals_home = 0
-        match.avg_goals_away = 0
+        match.avg_goals_home = 0.0
+        match.avg_goals_away = 0.0
 
     matches.append(match)
 

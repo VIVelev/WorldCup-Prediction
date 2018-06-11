@@ -13,7 +13,8 @@ __all__ = [
     "find_player_stats",
 ]
 
-stats = pd.read_csv(os.path.join(os.path.abspath(os.path.dirname(__file__)), "../static/ml/PlayersStats.csv"))
+DIR = os.path.abspath(os.path.dirname(__file__))
+stats = pd.read_csv(os.path.join(DIR, "./ml_data/PlayersStats.csv"))
 
 def clean(x):
     x = x.lower().strip().split(" ")
