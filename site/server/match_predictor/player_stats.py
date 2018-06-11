@@ -15,7 +15,7 @@ __all__ = [
 
 # # # LOAD PLAYERS' STATS # # #
 DIR = os.path.abspath(os.path.dirname(__file__))
-stats = pd.read_csv(os.path.join(DIR, "./ml_data/PlayersStats.csv"))
+stats = pd.read_csv(os.path.join(DIR, "./ml_data/PlayersStats.csv"), low_memory=False)
 # # # # # # # # # # # # # # # #
 
 def clean(x):
