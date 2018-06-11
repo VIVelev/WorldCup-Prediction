@@ -17,6 +17,13 @@ def get_average_goals(home, away):
                 avg_home += wwmatches.iloc[i]["Home Team Goals"]
                 avg_away += wwmatches.iloc[i]["Away Team Goals"]
                 n+=1
+                
+        if (home.lower() in wwmatches.iloc[i]["Away Team Name"].lower() and
+            away.lower() in wwmatches.iloc[i]["Home Team Name"].lower()):
+                avg_home += wwmatches.iloc[i]["Away Team Goals"]
+                avg_away += wwmatches.iloc[i]["Home Team Goals"]
+                n+=1
+
     try:
         return [
             avg_home/n,
