@@ -69,7 +69,7 @@ team_players = {
         "Poland": ["Wojciech Szczęsny", "Michał Pazdan", "Artur Jędrzejczyk", "Thiago Cionek", "Jan Bednarek", "Jacek Góralski", "Arkadiusz Milik", "Karol Linetty", "Robert Lewandowski", "Grzegorz Krychowiak", "Kamil Grosicki", "Bartosz Białkowski", "Maciej Rybus", "Łukasz Teodorczyk", "Kamil Glik", "Jakub Błaszczykowski", "Sławomir Peszko", "Bartosz Bereszyński", "Piotr Zieliński", "Łukasz Piszczek", "Rafał Kurzawa", "Łukasz Fabiański", "Dawid Kownacki"], 
         
         "Senegal": ["Abdoulaye Diallo", "Saliou Ciss", "Kalidou Koulibaly", "Kara Mbodji", "Idrissa Gueye", "Salif Sané", "Moussa Sow", "Cheikhou Kouyaté", "Mame Biram Diouf", "Sadio Mané", "Cheikh N'Doye", "Youssouf Sabaly", "Alfred N'Diaye", "Moussa Konaté", "Diafra Sakho", "Khadim N'Diaye", "Badou Ndiaye", "Ismaïla Sarr", "M'Baye Niang", "Keita Baldé", "Lamine Gassama", "Moussa Wagué", "Alfred Gomis"]
-    }
+}
 
 if __name__ == "__main__":
     DIR = os.path.abspath(os.path.dirname(__file__))
