@@ -23,3 +23,11 @@ def index():
         enumerate=enumerate, 
         country_codes=country_codes
     )
+
+@app.route('/information')
+def information():
+    return render_template('information.html')
+
+@app.route('/matches')
+def matches_render():
+    return render_template('matches.html')
