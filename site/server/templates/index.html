@@ -27,7 +27,7 @@
 						<span class="logo"><img src="/static/images/logo.svg" alt="" /></span>
 						<h1>World Cup Prediction</h1>
 						<p>Изкуствен интелект предсказва резултатите от световното първенство по футбол.<br>
-							Информация за мачовете <a href="information.html">тук</a></p>
+							Информация за мачовете <a href="/information">тук</a></p>
 					</header>
 
 				<!-- Nav -->
@@ -69,9 +69,9 @@
 														<td>{{ match.stage }}</td>
 														<td>{{ match.home }} <img src="http://flags.fmcdn.net/data/flags/w1160/{{ country_codes[match.home] }}.png" class="flag"></td>
 														<td>{{ match.away }} <img src="http://flags.fmcdn.net/data/flags/w1160/{{ country_codes[match.away] }}.png" class="flag"></td>
-														<td style="color: {% if match.prob_home >= 50 %} green {% else %} red {% endif %}">{{ match.prob_home }}</td>
-														<td style="color: {% if match.prob_draw >= 50 %} green {% else %} red {% endif %}">{{ match.prob_draw }}</td>
-														<td style="color: {% if match.prob_away >= 50 %} green {% else %} red {% endif %}">{{ match.prob_away }}</td>                                                     
+														<td style="color: {% if match.prob_home >= 50 %} green {% else %} red {% endif %}">{{ match.prob_home }}%</td>
+														<td style="color: {% if match.prob_draw >= 50 %} green {% else %} red {% endif %}">{{ match.prob_draw }}%</td>
+														<td style="color: {% if match.prob_away >= 50 %} green {% else %} red {% endif %}">{{ match.prob_away }}%</td>                                                     
 													</tr>
 												</tbody>
 											</table>
