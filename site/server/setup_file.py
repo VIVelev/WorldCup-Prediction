@@ -5,7 +5,7 @@ from match_predictor.mean_stats import get_average_goals
 from scraping import get_next_day_matches
 
 matches = []
-for match in get_next_day_matches():
+for match in get_next_day_matches(4):
     probs = predict_proba(
         match.stage, 50_000,
         match.home, match.away
@@ -24,6 +24,7 @@ for match in get_next_day_matches():
         match.avg_goals_away = 0.0
 
     matches.append(match)
+    print(match)
 
 with open("matches.b", "wb") as f:
     pickle.dump(matches, f)

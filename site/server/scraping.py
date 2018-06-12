@@ -58,8 +58,10 @@ class Match:
         
         return obj
 
-def get_next_day_matches():
-    tomorrow = datetime.date.today() + datetime.timedelta(days=2)
+def get_next_day_matches(days):
+    first_day = datetime.date(2018, 6, 14)
+    now = datetime.date.today()
+    tomorrow = datetime.timedelta(days=days)
     
     page = requests.get("http://www.fifa.com/worldcup/matches/")
     tree = html.fromstring(page.content)
@@ -87,5 +89,5 @@ def get_next_day_matches():
         
         match = Match(home=home, away=away, date=date, time=time, stage=group)
         
-        if match.date == tomorrow:
+        if match.date >= first_day and match.date <= first_day + tomorrow:
             yield match

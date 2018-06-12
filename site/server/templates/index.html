@@ -28,6 +28,24 @@
 						<h1>World Cup Prediction</h1>
 						<p>Изкуствен интелект предсказва резултатите от световното първенство по футбол.<br>
 							Информация за мачовете <a href="/information">тук</a></p>
+						<div class="row">
+							<div class="4u 1u$(medium)"> <br> </div>
+							<div class="4u 10u$(medium)">
+								<form action="/" method="POST">
+									<div class="select-wrapper">
+										<select name="dates">
+											<option value="">-- Изберете Дата --</option>
+											{% for i, date in enumerate(dates) %}
+												<option value="{{ date }}">{{ date }}</option>
+											{% endfor %}
+										</select>
+									</div>
+									<br>
+									<input type="submit" value="Търси">
+								</form>
+							</div>
+							<div class="4u 1u$(medium)"> <br> </div>
+						</div>
 					</header>
 
 				<!-- Nav -->
@@ -111,7 +129,7 @@
 							<h2>Контакти</h2>
 							<dl class="alt">
 								<dt>Email</dt>
-								<dd><a href="#">worldcupprediction@gmail.com</a></dd>
+								<dd><a href="https://mail.google.com/">worldcupprediction.net@gmail.com</a></dd>
 							</dl>
 							<!-- <ul class="actions">
 								<li><a href="generic.html" class="button">Научете повече</a></li>
