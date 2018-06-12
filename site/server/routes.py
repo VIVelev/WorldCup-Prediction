@@ -16,29 +16,10 @@ def index():
     dates = []
 
     if request.method == "GET":   
-        if datetime.date.today() >  datetime.date(2018, 6, 14):
-            get_date = datetime.date.today()
-        else:
-            get_date = datetime.date(2018, 6, 14)
+        for match in matches:        
+            if match.date.strftime("%d.%m.%Y") not in dates:
+                dates.append(match.date.strftime("%d.%m.%Y"))
 
-    else:
-        want_date = request.form["dates"]
-        if want_date != "":
-            want_date = want_date.split(".")
-
-            get_date = datetime.date(2018, int(want_date[1]), int(want_date[0]))
-        else:
-            if datetime.date.today() >  datetime.date(2018, 6, 14):
-                get_date = datetime.date.today()
-            else:
-                get_date = datetime.date(2018, 6, 14)
-
-
-    for match in matches:        
-        if match.date.strftime("%d.%m.%Y") not in dates:
-            dates.append(match.date.strftime("%d.%m.%Y"))
-
-        if match.date == get_date:
             if match.prob_home > match.prob_away and match.prob_home > match.prob_draw:
                 colors.append(["green", "red", "red"])
 
@@ -58,14 +39,60 @@ def index():
 
             final_matches.append(match)
 
-    return render_template(
-        "index.html", 
-        matches=final_matches,
-        enumerate=enumerate, 
-        country_codes=country_codes,
-        colors=colors,
-        dates=dates
-    )
+        return render_template(
+            "index.html", 
+            matches=final_matches,
+            enumerate=enumerate, 
+            country_codes=country_codes,
+            colors=colors,
+            dates=dates
+        )
+
+    else:
+        want_date = request.form["dates"]
+        if want_date != "":
+            want_date = want_date.split(".")
+            get_date = datetime.date(2018, int(want_date[1]), int(want_date[0]))
+
+        else:
+            if datetime.date.today() >  datetime.date(2018, 6, 14):
+                get_date = datetime.date.today()
+            else:
+                get_date = datetime.date(2018, 6, 14)
+        
+        for match in matches:        
+            if match.date.strftime("%d.%m.%Y") not in dates:
+                dates.append(match.date.strftime("%d.%m.%Y"))
+
+            if match.date == get_date:
+                if match.prob_home > match.prob_away and match.prob_home > match.prob_draw:
+                    colors.append(["green", "red", "red"])
+
+                elif match.prob_draw > match.prob_away and match.prob_draw > match.prob_home:
+                    colors.append(["red", "green", "red"])
+
+                elif match.prob_away > match.prob_home and match.prob_away > match.prob_draw: 
+                    colors.append(["red", "red", "green"])
+
+                else:
+                    colors.append(["red", "red", "red"])
+
+                if type(match.prob_home) is not int:
+                    match.prob_home = int(match.prob_home * 100)
+                    match.prob_away = int(match.prob_away * 100)
+                    match.prob_draw = int(match.prob_draw * 100)
+
+                final_matches.append(match)
+    
+
+        return render_template(
+            "index.html", 
+            matches=final_matches,
+            enumerate=enumerate, 
+            country_codes=country_codes,
+            colors=colors,
+            dates=dates
+        )
 
 @app.route('/information')
 def information():
