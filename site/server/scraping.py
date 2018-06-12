@@ -59,7 +59,7 @@ class Match:
         return obj
 
 def get_next_day_matches():
-    tomorrow = datetime.date.today() + datetime.timedelta(days=4)
+    tomorrow = datetime.date.today() + datetime.timedelta(days=2)
     
     page = requests.get("http://www.fifa.com/worldcup/matches/")
     tree = html.fromstring(page.content)
