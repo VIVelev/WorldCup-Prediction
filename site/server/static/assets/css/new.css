@@ -1,0 +1,16 @@
+@media only screen and (max-width: 800px) {
+    .computer{
+        display: none;
+    }
+}
+@media only screen and (min-width: 801px) {
+    .phone{
+        display: none;
+    }
+}
+/* .size{
+    position: absolute;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    margin-bottom: 30px;
+} */

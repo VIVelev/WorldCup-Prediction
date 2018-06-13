@@ -12,19 +12,18 @@ for match in get_next_day_matches(4):
     )
     avg_goals = get_average_goals(match.home, match.away, ignore_sides=True)
 
-    match.prob_home = probs[1]
-    match.prob_away = probs[2]
-    match.prob_draw = probs[0]
+    match.prob_home = round(probs[1]*100, 2)
+    match.prob_away = round(probs[2]*100, 2)
+    match.prob_draw = round(probs[0]*100, 2)
 
     if avg_goals != 0:
-        match.avg_goals_home = avg_goals[0]
-        match.avg_goals_away = avg_goals[1]
+        match.avg_goals_home = round(avg_goals[0], 2)
+        match.avg_goals_away = round(avg_goals[1], 2)
     else:
         match.avg_goals_home = 0.0
         match.avg_goals_away = 0.0
 
     matches.append(match)
-    print(match)
 
 with open("matches.b", "wb") as f:
     pickle.dump(matches, f)

@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="/static/assets/css/main.css" />
+		<link rel="stylesheet" href="/static/assets/css/new.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 
@@ -28,11 +29,10 @@
 						<h1>World Cup Prediction</h1>
 						<p>Изкуствен интелект предсказва резултатите от световното първенство по футбол.<br>
 							Информация за мачовете <a href="/information">тук</a></p>
-						<div class="row">
-							<div class="4u 1u$(medium)"> <br> </div>
-							<div class="4u 10u$(medium)">
-								<form action="/" method="POST">
-									<div class="select-wrapper">
+							<!-- <div class="4u 1u$(medium)"> <br> </div> -->
+							<!-- <div class="4u 10u$(medium) size"> -->
+								<form action="/" method="POST" style="width: 100%">
+									<div class="select-wrapper" style="width: 100%">
 										<select name="dates">
 											<option value="">-- Изберете Дата --</option>
 											{% for i, date in enumerate(dates) %}
@@ -43,9 +43,8 @@
 									<br>
 									<input type="submit" value="Търси">
 								</form>
-							</div>
-							<div class="4u 1u$(medium)"> <br> </div>
-						</div>
+							<!-- </div> -->
+							<!-- <div class="4u 1u$(medium)"> <br> </div> -->
 					</header>
 
 				<!-- Nav -->
@@ -68,33 +67,58 @@
 										<header class="major">
 											<h2>{{ match.home }} - {{ match.away }}</h2>
 										</header>
-										<h2>{{ match.time }} часа</h2>
-										<div class="table-wrapper">
-											<table class="alt">
-												<thead>
-													<tr>
-														<th>Дата</th>
-														<th>Фаза</th>
-														<th>Домакин</th>
-														<th>Гост</th>
-														<th>За Домакин</th>
-														<th>За Равенство</th>
-														<th>За Гост</th>                                                 
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>{{ match.date.strftime("%d.%m.%Y") }}г.</td>
-														<td>{{ match.stage }}</td>
-														<td>{{ match.home }} <img src="http://flags.fmcdn.net/data/flags/w1160/{{ country_codes[match.home] }}.png" class="flag"></td>
-														<td>{{ match.away }} <img src="http://flags.fmcdn.net/data/flags/w1160/{{ country_codes[match.away] }}.png" class="flag"></td>
-														<td style="color: {{ colors[i][0] }}">{{ match.prob_home }}%</td>
-														<td style="color: {{ colors[i][1] }}">{{ match.prob_draw }}%</td>
-														<td style="color: {{ colors[i][2] }}">{{ match.prob_away }}%</td>                                                     
-													</tr>
-												</tbody>
-											</table>
+
+										<div class="computer">
+											<h2>{{ match.time }} часа</h2>
+											<div class="table-wrapper">
+												<table class="alt">
+													<thead>
+														<tr>
+															<th>Дата</th>
+															<th>Фаза</th>
+															<th>Домакин</th>
+															<th>Гост</th>
+															<th>За Домакин</th>
+															<th>За Равенство</th>
+															<th>За Гост</th>                                                 
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>{{ match.date.strftime("%d.%m.%Y") }}г.</td>
+															<td>{{ match.stage }}</td>
+															<td>{{ match.home }} <img src="http://flags.fmcdn.net/data/flags/w1160/{{ country_codes[match.home] }}.png" class="flag"></td>
+															<td>{{ match.away }} <img src="http://flags.fmcdn.net/data/flags/w1160/{{ country_codes[match.away] }}.png" class="flag"></td>
+															<td style="color: {{ colors[i][0] }}">{{ match.prob_home }}%</td>
+															<td style="color: {{ colors[i][1] }}">{{ match.prob_draw }}%</td>
+															<td style="color: {{ colors[i][2] }}">{{ match.prob_away }}%</td>                                                     
+														</tr>
+													</tbody>
+												</table>
+											</div>
 										</div>
+										
+										<div class="phone">
+											<h2>{{ match.stage }}</h2>
+											<h2>{{ match.time }}, {{ match.date.strftime("%d.%m.%Y") }}г.</h2>
+											<div class="table-wrapper">
+												<table class="alt">
+													<tbody>
+														<tr>
+															<td>{{ match.home }} <img src="http://flags.fmcdn.net/data/flags/w1160/{{ country_codes[match.home] }}.png" class="flag"></td>
+															<td>Равенство</td>
+															<td>{{ match.away }} <img src="http://flags.fmcdn.net/data/flags/w1160/{{ country_codes[match.away] }}.png" class="flag"></td>                                               
+														</tr>
+														<tr>
+															<td style="color: {{ colors[i][0] }}">{{ match.prob_home }}%</td>
+															<td style="color: {{ colors[i][1] }}">{{ match.prob_draw }}%</td>
+															<td style="color: {{ colors[i][2] }}">{{ match.prob_away }}%</td>                                                     
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+
 										<div class="table-wrapper">
 											<table class="alt">
 												<thead>

@@ -32,10 +32,6 @@ def index():
             else:
                 colors.append(["red", "red", "red"])
 
-            match.prob_home = round(match.prob_home*100, 2)
-            match.prob_away = round(match.prob_away*100, 2)
-            match.prob_draw = round(match.prob_draw*100, 2)
-
             final_matches.append(match)
 
         return render_template(
@@ -75,10 +71,6 @@ def index():
 
                 else:
                     colors.append(["red", "red", "red"])
-
-                match.prob_home = round(match.prob_home*100, 2)
-                match.prob_away = round(match.prob_away*100, 2)
-                match.prob_draw = round(match.prob_draw*100, 2)
 
                 final_matches.append(match)
 
