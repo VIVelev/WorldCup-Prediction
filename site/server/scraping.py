@@ -60,7 +60,6 @@ class Match:
 
 def get_next_day_matches(days):
     first_day = datetime.date(2018, 6, 14)
-    now = datetime.date.today()
     tomorrow = datetime.timedelta(days=days)
     
     page = requests.get("http://www.fifa.com/worldcup/matches/")

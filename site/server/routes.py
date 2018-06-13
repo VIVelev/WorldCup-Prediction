@@ -32,10 +32,9 @@ def index():
             else:
                 colors.append(["red", "red", "red"])
 
-            if type(match.prob_home) is not int:
-                match.prob_home = int(match.prob_home * 100)
-                match.prob_away = int(match.prob_away * 100)
-                match.prob_draw = int(match.prob_draw * 100)
+            match.prob_home = round(match.prob_home*100, 2)
+            match.prob_away = round(match.prob_away*100, 2)
+            match.prob_draw = round(match.prob_draw*100, 2)
 
             final_matches.append(match)
 
@@ -77,13 +76,11 @@ def index():
                 else:
                     colors.append(["red", "red", "red"])
 
-                if type(match.prob_home) is not int:
-                    match.prob_home = int(match.prob_home * 100)
-                    match.prob_away = int(match.prob_away * 100)
-                    match.prob_draw = int(match.prob_draw * 100)
+                match.prob_home = round(match.prob_home*100, 2)
+                match.prob_away = round(match.prob_away*100, 2)
+                match.prob_draw = round(match.prob_draw*100, 2)
 
                 final_matches.append(match)
-    
 
         return render_template(
             "index.html", 
