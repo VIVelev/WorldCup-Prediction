@@ -25,24 +25,22 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<span class="logo"><img src="/static/images/28-512.png" width="200px" alt="" /></span>
+						<span class="logo"><img src="https://cdn4.iconfinder.com/data/icons/science-and-technology-1-17/65/28-512.png" width="200px" alt="" /></span>
 						<h1>World Cup Prediction</h1>
-						<p>For an English version click <a href="/en">here.</a></p>
-						<p>Изкуствен интелект предсказва резултатите от световното първенство по футбол.<br>
-							Информация за мачовете <a href="/information">тук</a></p>
-							<!-- <div class="4u 1u$(medium)"> <br> </div> -->
-							<!-- <div class="4u 10u$(medium) size"> -->
-								<form action="/" method="POST" style="width: 100%">
+						<p>За версия на български натиснете <a href="/">тук.</a></p>
+                        <p>Predicting the 2018 FIFA World Cup using Artificial Intelligence. <br>
+                            More information about the matches <a href="/information">here.</a></p>
+							    <form action="/" method="POST" style="width: 100%">
 									<div class="select-wrapper" style="width: 100%">
 										<select name="dates">
-											<option value="">-- Изберете Дата --</option>
+											<option value="">-- Choose a Date --</option>
 											{% for i, date in enumerate(dates) %}
 												<option value="{{ date }}">{{ date }}</option>
 											{% endfor %}
 										</select>
 									</div>
 									<br>
-									<input type="submit" value="Търси">
+									<input type="submit" value="Search">
 								</form>
 							<!-- </div> -->
 							<!-- <div class="4u 1u$(medium)"> <br> </div> -->
@@ -70,18 +68,18 @@
 										</header>
 
 										<div class="computer">
-											<h2>{{ match.time }} часа</h2>
+											<h2>{{ match.time }} o'clock (Eastern European Time)</h2>
 											<div class="table-wrapper">
 												<table class="alt">
 													<thead>
 														<tr>
-															<th>Дата</th>
-															<th>Фаза</th>
-															<th>Домакин</th>
-															<th>Гост</th>
-															<th>За Домакин</th>
-															<th>За Равенство</th>
-															<th>За Гост</th>                                                 
+															<th>Date</th>
+															<th>Stage</th>
+															<th>Home</th>
+															<th>Away</th>
+															<th>Probability for Home</th>
+															<th>Probability for Draw</th>
+															<th>Probability for Away</th>                                                 
 														</tr>
 													</thead>
 													<tbody>
@@ -101,13 +99,13 @@
 										
 										<div class="phone">
 											<h2>{{ match.stage }}</h2>
-											<h2>{{ match.time }}, {{ match.date.strftime("%d.%m.%Y") }}г.</h2>
+											<h2>{{ match.time }}, {{ match.date.strftime("%d.%m.%Y") }}</h2>
 											<div class="table-wrapper">
 												<table class="alt">
 													<tbody>
 														<tr>
 															<td>{{ match.home }} <img src="http://flags.fmcdn.net/data/flags/w1160/{{ country_codes[match.home] }}.png" class="flag"></td>
-															<td>Равенство</td>
+															<td>Draw</td>
 															<td>{{ match.away }} <img src="http://flags.fmcdn.net/data/flags/w1160/{{ country_codes[match.away] }}.png" class="flag"></td>                                               
 														</tr>
 														<tr>
@@ -124,14 +122,14 @@
 											<table class="alt">
 												<thead>
 													<tr>
-														<th>Статистика</th>
-														<th>За Домакин</th>
-														<th>За Гост</th>
+														<th>Statistic</th>
+														<th>Home</th>
+														<th>Away</th>
 													</tr>
 												</thead>
 												<tbody>
 													<tr>
-														<td>Средни голове от предишни мачове</td>
+														<td>Average goals from past matches</td>
 														<td>{{ match.avg_goals_home }}</td>
 														<td>{{ match.avg_goals_away }}</td>
 													</tr>
@@ -148,11 +146,15 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<section>
-							<h2>Правила за ползване</h2>
-							<p>Създателите на сайта не носят отговорност за резултати, различни от прогнозираните.</p>	
+							<h2>Terms of Use</h2>
+							<p>
+								The creators of the website do not 
+								bring any responsibility, if the predicted 
+								outcomes of the matches are not correct.
+							</p>	
 						</section>
 						<section>
-							<h2>Контакти</h2>
+							<h2>Contacts</h2>
 							<dl class="alt">
 								<dt>Email</dt>
 								<dd><a href="https://mail.google.com/">worldcupprediction.net@gmail.com</a></dd>
