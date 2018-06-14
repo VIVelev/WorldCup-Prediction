@@ -6,8 +6,12 @@ from app import app
 from constants import country_codes
 from scraping import Match, get_next_day_matches
 
+import json
+
 with open("matches.b", "rb") as f:
     matches = pickle.load(f)
+
+results = json.load(open("results.json", "r"))
 
 @app.route('/', methods=["GET", "POST"])
 def index():
@@ -193,7 +197,8 @@ def past():
         enumerate=enumerate, 
         country_codes=country_codes,
         colors=colors,
-        dates=dates
+        dates=dates,
+        results=results
     )
 
 

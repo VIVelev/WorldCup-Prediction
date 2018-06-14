@@ -4,8 +4,10 @@ from match_predictor.main import predict_proba
 from match_predictor.mean_stats import get_average_goals
 from scraping import get_next_day_matches
 
+import datetime
+
 matches = []
-for match in get_next_day_matches(4):
+for match in get_next_day_matches(datetime.date.today().day - 14 + 3): #5
     probs = predict_proba(
         match.stage, 50_000,
         match.home, match.away
