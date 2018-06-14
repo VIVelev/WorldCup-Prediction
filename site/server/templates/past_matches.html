@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>World Cup Prediction</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="/static/assets/css/main.css" />
+		<link rel="stylesheet" href="/static/assets/css/new.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+
+		<style>
+			.flag{
+				/* border: 1px solid gray; */
+				margin-left: 20px;
+				width: 30px;
+			}
+		</style>
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<span class="logo"><img src="/static/images/28-512.png" width="200px" alt="" /></span>
+						<h1>World Cup Prediction</h1>
+						<p>For an English version click <a href="/en">here.</a></p>
+						<p>Изкуствен интелект предсказва резултатите от световното първенство по футбол.<br>
+							Информация за мачовете <a href="/information">тук</a></p>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							{% for i, match in enumerate(matches) %}
+								<li><a href="#{{i+1}}" {% if i == 0 %}class="active"{% endif %}>{{ match.home }} - {{ match.away }}</a></li>
+							{% endfor %}
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+                        
+						<!-- Introduction -->
+						{% for i, match in enumerate(matches) %}
+						<section id="{{i+1}}" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>{{ match.home }} - {{ match.away }}</h2>
+                                        </header>
+                                        <h2>Ние предсказахме така:</h2>
+
+										<div class="computer">
+											<div class="table-wrapper">
+												<table class="alt">
+													<thead>
+														<tr>
+															<th>Дата</th>
+															<th>Фаза</th>
+															<th>Домакин</th>
+															<th>Гост</th>
+															<th>За Домакин</th>
+															<th>За Равенство</th>
+															<th>За Гост</th>                                                 
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>{{ match.date.strftime("%d.%m.%Y") }}г.</td>
+															<td>{{ match.stage }}</td>
+															<td>{{ match.home }} <img src="http://flags.fmcdn.net/data/flags/w1160/{{ country_codes[match.home] }}.png" class="flag"></td>
+															<td>{{ match.away }} <img src="http://flags.fmcdn.net/data/flags/w1160/{{ country_codes[match.away] }}.png" class="flag"></td>
+															<td style="color: {{ colors[i][0] }}">{{ match.prob_home }}%</td>
+															<td style="color: {{ colors[i][1] }}">{{ match.prob_draw }}%</td>
+															<td style="color: {{ colors[i][2] }}">{{ match.prob_away }}%</td>                                                     
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										
+										<div class="phone">
+											<h2>{{ match.stage }}</h2>
+											<h2>{{ match.date.strftime("%d.%m.%Y") }}г.</h2>
+											<div class="table-wrapper">
+												<table class="alt">
+													<tbody>
+														<tr>
+															<td>{{ match.home }} <img src="http://flags.fmcdn.net/data/flags/w1160/{{ country_codes[match.home] }}.png" class="flag"></td>
+															<td>Равенство</td>
+															<td>{{ match.away }} <img src="http://flags.fmcdn.net/data/flags/w1160/{{ country_codes[match.away] }}.png" class="flag"></td>                                               
+														</tr>
+														<tr>
+															<td style="color: {{ colors[i][0] }}">{{ match.prob_home }}%</td>
+															<td style="color: {{ colors[i][1] }}">{{ match.prob_draw }}%</td>
+															<td style="color: {{ colors[i][2] }}">{{ match.prob_away }}%</td>                                                     
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+
+										<div class="table-wrapper">
+											<table class="alt">
+												<thead>
+													<tr>
+														<th>Статистика</th>
+														<th>За Домакин</th>
+														<th>За Гост</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Средни голове от предишни мачове</td>
+														<td>{{ match.avg_goals_home }}</td>
+														<td>{{ match.avg_goals_away }}</td>
+													</tr>
+												</tbody>
+											</table>
+                                        </div>
+                                        <h2>Спечели: Русия</h2>
+									</div>
+								</div>
+							</section>
+						{% endfor %}
+                        
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<h2>Правила за ползване</h2>
+							<p>Създателите на сайта не носят отговорност за резултати, различни от прогнозираните.</p>	
+						</section>
+						<section>
+							<h2>Контакти</h2>
+							<dl class="alt">
+								<dt>Email</dt>
+								<dd><a href="https://mail.google.com/">worldcupprediction.net@gmail.com</a></dd>
+							</dl>
+							<!-- <ul class="actions">
+								<li><a href="generic.html" class="button">Научете повече</a></li>
+							</ul> -->
+							<ul class="icons">
+								<!-- <li><a href="#" class="icon fa-twitter alt"><span class="label">Twitter</span></a></li> -->
+								<li><a href="https://github.com/VIVelev/WorldCup-Prediction" class="icon fa-github alt"><span class="label">GitHub</span></a></li>
+							</ul>				
+						</section>
+						<p class="copyright">&copy; Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/static/assets/js/jquery.min.js"></script>
+			<script src="/static/assets/js/jquery.scrollex.min.js"></script>
+			<script src="/static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="/static/assets/js/skel.min.js"></script>
+			<script src="/static/assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="/static/assets/js/main.js"></script>
+
+	</body>
+</html>
