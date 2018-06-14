@@ -161,6 +161,14 @@ def index_en():
 def information():
     return render_template('information.html')
 
+@app.route('/information_en')
+def information_en():
+    return render_template('information_en.html')
+
 @app.route('/matches')
 def matches_render():
     return render_template('matches.html')
+
+@app.route('/matches_en')
+def matches_en():
+    return render_template('matches_en.html')
