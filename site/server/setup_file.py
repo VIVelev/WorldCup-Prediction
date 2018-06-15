@@ -9,7 +9,7 @@ import datetime
 matches = []
 for match in get_next_day_matches(datetime.date.today().day - 14 + 3): #5
     probs = predict_proba(
-        match.stage, 50_000,
+        match.stage, 50000,
         match.home, match.away
     )
     avg_goals = get_average_goals(match.home, match.away, ignore_sides=True)
