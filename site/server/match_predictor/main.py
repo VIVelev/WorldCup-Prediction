@@ -13,7 +13,6 @@ __all__ = [
     "predict_proba",
     "xgb_model",
     "rf_model",
-    "stage_encoder",
     "team_name_encoder",
 ]
 
@@ -26,9 +25,6 @@ with open(os.path.join(DIR, "./ml_data/xgb_model.b"), "rb") as f:
 
 with open(os.path.join(DIR, "./ml_data/rf_model.b"), "rb") as f:
     rf_model = pickle.load(f)
-
-with open(os.path.join(DIR, "./ml_data/stage_encoder.b"), "rb") as f:
-    stage_encoder = pickle.load(f)
 
 with open(os.path.join(DIR, "./ml_data/team_name_encoder.b"), "rb") as f:
     team_name_encoder = pickle.load(f)
@@ -45,7 +41,6 @@ def get_nbest_scores(team_name, n=11):
     for i in range(len(players)):
         try:
             scores.append(int(players[i][1]))
-            continue
 
         except:
             player_score = int(find_player_stats(players[i])["Overall"])
@@ -59,9 +54,8 @@ def get_nbest_scores(team_name, n=11):
     scores.sort()
     return scores[:n]
 
-def predict_proba(stage, home_team_name, away_team_name):
+def predict_proba(home_team_name, away_team_name):
     feature_names = [
-        "Stage",
         "Home Team Name",
         "Away Team Name",
         "Player 1 Overall Diff",
@@ -75,14 +69,12 @@ def predict_proba(stage, home_team_name, away_team_name):
         "Player 9 Overall Diff",
         "Player 10 Overall Diff",
         "Player 11 Overall Diff",
-        "FIFA Rank Diff",
         "Avg Goals Diff",
+        "FIFA Rank Diff",
     ]
 
     data = []
 
-    # Stage
-    data.append(stage_encoder.transform([stage])[0])
     # Home Team Name
     data.append(team_name_encoder.transform([home_team_name])[0])
     # Away Team Name
@@ -94,13 +86,6 @@ def predict_proba(stage, home_team_name, away_team_name):
     for i in range(11):
         data.append(home_players_scores[i] - away_players_scores[i])
 
-    # FIFA Rank Diff 
-    ranks = get_fifa_ranks(home_team_name, away_team_name)
-    if ranks:
-        data.append(ranks[0]-ranks[1])
-    else:
-        data.append(0.0)
-
     # Avg Goals Diff
     avg_goals = get_average_goals(home_team_name, away_team_name)
     if avg_goals:
@@ -108,6 +93,14 @@ def predict_proba(stage, home_team_name, away_team_name):
     else:
         data.append(0.0)
 
+    # FIFA Rank Diff 
+    ranks = get_fifa_ranks(home_team_name, away_team_name)
+    if ranks:
+        data.append(ranks[0]-ranks[1])
+    else:
+        data.append(0.0)
+
+    # Aggregating data
     df = pd.DataFrame(columns=feature_names)
     data = pd.Series(data, index=feature_names)
     df = df.append(data, ignore_index=True)

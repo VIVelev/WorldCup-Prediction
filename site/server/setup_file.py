@@ -6,8 +6,12 @@ from scraping import get_next_day_matches
 
 matches = []
 for match in get_next_day_matches(4):
+    if match.home == "IR Iran":
+        match.home = "Iran"
+    if match.away == "IR Iran":
+        match.away = "Iran"
+
     probs = predict_proba(
-        match.stage,
         match.home,
         match.away
     )

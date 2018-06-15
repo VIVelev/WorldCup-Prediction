@@ -5,10 +5,10 @@ Predicting the 2018 FIFA World Cup results with Artificial Intelligence
 [![Build Status](https://travis-ci.org/VIVelev/WorldCup-Prediction.svg?branch=master)](https://travis-ci.org/VIVelev/WorldCup-Prediction)
 
 ## Website:
-- a version in bulgarian: http://78.130.176.105/
-- a version in english: (to come very soon...)
+- a version in bulgarian: http://worldcupprediction.net
+- a version in english: http://worldcupprediction.net/en
 
-## Accuracy Score / Result
+<!-- ## Accuracy Score / Result
 
 |           Model          |10-fold CV Accuracy Score (%)|
 |:------------------------:|:---------------------------:|
@@ -19,7 +19,7 @@ Predicting the 2018 FIFA World Cup results with Artificial Intelligence
 |Gradient Boosting Machines|73.50|
 |ADA boost (tree)          |68.25|
 |Neural Network            |40.87|
-|XGBoost                   |78.53|
+|XGBoost                   |78.53| -->
 
 ## Maintainers:
 - Victor Velev

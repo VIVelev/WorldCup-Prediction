@@ -2,7 +2,7 @@ import os
 import pandas as pd
 
 __all__ = [
-    "wwmatches",
+    "matches",
     "fifa_rankings",
     "get_average_goals",
     "get_fifa_ranks"
@@ -10,7 +10,7 @@ __all__ = [
 
 # # # LOAD DATASETS # # #
 DIR = os.path.abspath(os.path.dirname(__file__))
-wwmatches = pd.read_csv(os.path.join(DIR, "./ml_data/wwmatches.csv"))
+matches = pd.read_csv(os.path.join(DIR, "./ml_data/final.csv"))
 fifa_rankings = pd.read_csv(os.path.join(DIR, "./ml_data/fifa_rankings.csv"))
 # # # # # # # # # # # # #
 
@@ -19,18 +19,18 @@ def get_average_goals(home, away, ignore_sides=False):
     avg_away = 0
     n = 0
     
-    for i in range(len(wwmatches)):
-        if (home.lower() in wwmatches.iloc[i]["Home Team Name"].lower() and
-            away.lower() in wwmatches.iloc[i]["Away Team Name"].lower()):
-                avg_home += wwmatches.iloc[i]["Home Team Goals"]
-                avg_away += wwmatches.iloc[i]["Away Team Goals"]
+    for i in range(len(matches)):
+        if (home.lower() in matches["Home Team Name"][i].lower() and
+            away.lower() in matches["Away Team Name"][i].lower()):
+                avg_home += matches["Home Team Goals"][i]
+                avg_away += matches["Away Team Goals"][i]
                 n+=1
         
         if ignore_sides:
-            if (home.lower() in wwmatches.iloc[i]["Away Team Name"].lower() and
-                away.lower() in wwmatches.iloc[i]["Home Team Name"].lower()):
-                    avg_home += wwmatches.iloc[i]["Away Team Goals"]
-                    avg_away += wwmatches.iloc[i]["Home Team Goals"]
+            if (home.lower() in matches["Away Team Name"][i].lower() and
+                away.lower() in matches["Home Team Name"][i].lower()):
+                    avg_home += matches["Away Team Goals"][i]
+                    avg_away += matches["Home Team Goals"][i]
                     n+=1
 
     if n > 0:
