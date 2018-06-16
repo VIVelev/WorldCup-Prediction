@@ -108,6 +108,3 @@ venv.bak/
 
 # VS Code
 .vscode
-
-# Big files
-./datasets/sentiment.zip

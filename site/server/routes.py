@@ -165,7 +165,6 @@ def index_en():
             dates=dates
         )
 
-
 @app.route('/past')
 def past():
     colors = []
@@ -200,8 +199,6 @@ def past():
         dates=dates,
         results=results
     )
-
-
 
 @app.route('/information')
 def information():

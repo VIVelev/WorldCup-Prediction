@@ -4,8 +4,6 @@ from match_predictor.main import predict_proba
 from match_predictor.mean_stats import get_average_goals
 from scraping import get_next_day_matches
 
-import datetime
-
 matches = []
 for match in get_next_day_matches(4):
     if match.home == "IR Iran":
