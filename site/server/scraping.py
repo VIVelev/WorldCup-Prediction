@@ -65,7 +65,7 @@ def get_next_day_matches(days):
     page = requests.get("http://www.fifa.com/worldcup/matches/")
     tree = html.fromstring(page.content)
 
-    matches = tree.find_class('fi-mu result') + tree.find_class('fi-mu fixture')
+    matches = tree.find_class('fi-mu result') + tree.find_class('fi-mu live') + tree.find_class('fi-mu fixture')
     for match in matches:
         info_els = match.cssselect(".fi-mu__info")
         if len(info_els) == 0:
