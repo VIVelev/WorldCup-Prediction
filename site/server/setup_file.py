@@ -4,15 +4,18 @@ from match_predictor.main import predict_proba
 from match_predictor.mean_stats import get_average_goals
 from scraping import get_next_day_matches
 
-import datetime
-
 matches = []
-for match in get_next_day_matches(datetime.date.today().day - 14 + 3): #4
+for match in get_next_day_matches(4):
+    if match.home == "IR Iran":
+        match.home = "Iran"
+    if match.away == "IR Iran":
+        match.away = "Iran"
+
     probs = predict_proba(
-        match.stage, 50000,
-        match.home, match.away
+        match.home,
+        match.away
     )
-    avg_goals = get_average_goals(match.home, match.away, ignore_sides=True)
+    avg_goals = get_average_goals(match.home, match.away, 2018, ignore_sides=True)
 
     match.prob_home = round(probs[1]*100, 2)
     match.prob_away = round(probs[2]*100, 2)
