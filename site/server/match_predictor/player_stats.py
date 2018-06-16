@@ -9,7 +9,6 @@ __all__ = [
     "clean",
     "find_start_index",
     "find_end_index",
-    "similarity_score",
     "find_player_stats",
 ]
 
@@ -74,7 +73,7 @@ def find_start_index(name):
     i = 0
     jump_step = int(sqrt(len(stats)))
     
-    while i < len(stats) and name[0] > clean(stats.iloc[i]["Name"])[0]:
+    while i < len(stats) and name[0] > clean(stats["Name"][i])[0]:
         i += jump_step
     
     if i >= jump_step:
@@ -87,7 +86,7 @@ def find_end_index(name):
     i = len(stats)-1
     jump_step = int(sqrt(len(stats)))
     
-    while i >= 0 and name[0] < clean(stats.iloc[i]["Name"])[0]:
+    while i >= 0 and name[0] < clean(stats["Name"][i])[0]:
         i -= jump_step
 
     if i < len(stats)-jump_step:
@@ -95,26 +94,11 @@ def find_end_index(name):
 
     return i
 
-def similarity_score(a, b):
-    a = clean(a)
-    b = clean(b)
-    count = 0
-    length = min(len(a), len(b))
-    
-    for i in range(length):
-        if a[i] == b[i]:
-            count+=1
-            
-    return count/length
-
 def find_player_stats(name, debug=False):
     best_match_index = -1
-    best_score = 0
             
     for i in range(find_start_index(name), find_end_index(name)):      
-        current_score = similarity_score(name, stats.iloc[i]["Name"])
-        if current_score > best_score:
-            best_score = current_score
+        if name == stats["Name"][i]:
             best_match_index = i
             
     if best_match_index != -1:
@@ -123,5 +107,4 @@ def find_player_stats(name, debug=False):
         return stats.iloc[best_match_index]
         
     else:
-        # Pick a random player's stat
-        return stats.iloc[random.randint(0, len(stats)-1)]
+        return False

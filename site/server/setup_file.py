@@ -15,7 +15,7 @@ for match in get_next_day_matches(4):
         match.home,
         match.away
     )
-    avg_goals = get_average_goals(match.home, match.away, ignore_sides=True)
+    avg_goals = get_average_goals(match.home, match.away, 2018, ignore_sides=True)
 
     match.prob_home = round(probs[1]*100, 2)
     match.prob_away = round(probs[2]*100, 2)

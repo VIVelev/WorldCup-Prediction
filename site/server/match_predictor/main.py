@@ -1,18 +1,18 @@
 import os
 import pickle
 from pprint import pprint
+from statistics import mean
 
 import numpy as np
 import pandas as pd
 
-from .mean_stats import get_average_goals, get_fifa_ranks
+from .mean_stats import get_average_goals, get_fifa_points
 from .player_stats import find_player_stats
 
 __all__ = [
     "get_nbest_scores",
     "predict_proba",
     "xgb_model",
-    "rf_model",
     "team_name_encoder",
 ]
 
@@ -23,14 +23,11 @@ DIR = os.path.abspath(os.path.dirname(__file__))
 with open(os.path.join(DIR, "./ml_data/xgb_model.b"), "rb") as f:
     xgb_model = pickle.load(f)
 
-with open(os.path.join(DIR, "./ml_data/rf_model.b"), "rb") as f:
-    rf_model = pickle.load(f)
-
 with open(os.path.join(DIR, "./ml_data/team_name_encoder.b"), "rb") as f:
     team_name_encoder = pickle.load(f)
 # # # # # # # # # # # # #
 
-def get_nbest_scores(team_name, n=11):
+def get_nbest_scores(team_name, n=11, debug=False):
     with open(os.path.join(DIR, "./ml_data/team_players.b"), "rb") as f:
         team_players = pickle.load(f)
 
@@ -43,9 +40,18 @@ def get_nbest_scores(team_name, n=11):
             scores.append(int(players[i][1]))
 
         except:
-            player_score = int(find_player_stats(players[i])["Overall"])
-            scores.append(player_score)
-            team_players[team_name][i] = [players[i], player_score]
+            player_stats = find_player_stats(players[i], debug=debug)
+            if type(player_stats) is bool:
+                try:
+                    scores.append(mean(scores))
+                    team_players[team_name][i] = [players[i], mean(scores)]
+                except:
+                    scores.append(60)
+                    team_players[team_name][i] = [players[i], 60]
+            else:
+                player_score = int(player_stats["Overall"])
+                scores.append(player_score)
+                team_players[team_name][i] = [players[i], player_score]
 
     # pprint(team_players)
     with open(os.path.join(DIR, "./ml_data/team_players.b"), "wb") as f:
@@ -56,48 +62,41 @@ def get_nbest_scores(team_name, n=11):
 
 def predict_proba(home_team_name, away_team_name):
     feature_names = [
-        "Home Team Name",
         "Away Team Name",
-        "Player 1 Overall Diff",
-        "Player 2 Overall Diff",
-        "Player 3 Overall Diff",
-        "Player 4 Overall Diff",
-        "Player 5 Overall Diff",
-        "Player 6 Overall Diff",
-        "Player 7 Overall Diff",
-        "Player 8 Overall Diff",
-        "Player 9 Overall Diff",
-        "Player 10 Overall Diff",
-        "Player 11 Overall Diff",
-        "Avg Goals Diff",
-        "FIFA Rank Diff",
+        "Home Team Name",
+        "Home Avg Goals",
+        "Away Avg Goals",
+        "Home FIFA Points",
+        "Away FIFA Points"
     ]
 
     data = []
 
-    # Home Team Name
-    data.append(team_name_encoder.transform([home_team_name])[0])
     # Away Team Name
     data.append(team_name_encoder.transform([away_team_name])[0])
+    # Home Team Name
+    data.append(team_name_encoder.transform([home_team_name])[0])
 
-    # Overall
-    home_players_scores = get_nbest_scores(home_team_name)
-    away_players_scores = get_nbest_scores(away_team_name)
-    for i in range(11):
-        data.append(home_players_scores[i] - away_players_scores[i])
-
-    # Avg Goals Diff
-    avg_goals = get_average_goals(home_team_name, away_team_name)
+    # Avg Goals
+    avg_goals = get_average_goals(home_team_name, away_team_name, 2018)
     if avg_goals:
-        data.append(avg_goals[0]-avg_goals[1])
+        # Home Avg Goals
+        data.append(avg_goals[0])
+        # Away Avg Goals
+        data.append(avg_goals[1])
     else:
         data.append(0.0)
+        data.append(0.0)
 
-    # FIFA Rank Diff 
-    ranks = get_fifa_ranks(home_team_name, away_team_name)
-    if ranks:
-        data.append(ranks[0]-ranks[1])
+    # FIFA Points
+    points = get_fifa_points(home_team_name, away_team_name)
+    if points:
+        # Home FIFA Points
+        data.append(points[0])
+        # Away FIFA Points
+        data.append(points[1])
     else:
+        data.append(0.0)
         data.append(0.0)
 
     # Aggregating data
@@ -109,4 +108,4 @@ def predict_proba(home_team_name, away_team_name):
     # 0 -> Draw
     # 1 -> Home
     # 2 -> Away
-    return rf_model.predict_proba(df)[0]
+    return xgb_model.predict_proba(df)[0]
