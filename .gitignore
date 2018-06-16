@@ -103,9 +103,6 @@ venv.bak/
 # Mac OSX
 .DS_Store
 
-# CSV files
-**/*.csv
-
 # VS Code
 .vscode
 

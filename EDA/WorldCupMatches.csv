@@ -1,0 +1,143 @@
+Year,Datetime,Stage,Home Team Name,Home Team Goals,Away Team Goals,Away Team Name,Attendance,Half-time Home Goals,Half-time Away Goals,Referee,Assistant 1,Assistant 2,Home Team Initials,Away Team Initials
+2010.0,11 Jun 2010 - 16:00 ,Group A,South Africa,1.0,1.0,Mexico,84490.0,0.0,0.0,Ravshan IRMATOV (UZB),ILYASOV Rafael (UZB),KOCHKAROV Bakhadyr (KGZ),RSA,MEX
+2010.0,11 Jun 2010 - 20:30 ,Group A,Uruguay,0.0,0.0,France,64100.0,0.0,0.0,NISHIMURA Yuichi (JPN),SAGARA Toru (JPN),JEONG Hae Sang (KOR),URU,FRA
+2010.0,12 Jun 2010 - 13:30 ,Group B,Korea Republic,2.0,0.0,Greece,31513.0,1.0,0.0,HESTER Michael (NZL),HINTZ Jan Hendrik (NZL),MAKASINI Tevita (TGA),KOR,GRE
+2010.0,12 Jun 2010 - 16:00 ,Group B,Argentina,1.0,0.0,Nigeria,55686.0,1.0,0.0,Wolfgang STARK (GER),SALVER Jan-Hendrik (GER),PICKEL Mike (GER),ARG,NGA
+2010.0,12 Jun 2010 - 20:30 ,Group C,England,1.0,1.0,USA,38646.0,1.0,1.0,SIMON Carlos (BRA),HAUSMANN Altemir (BRA),BRAATZ Roberto (BRA),ENG,USA
+2010.0,13 Jun 2010 - 13:30 ,Group C,Algeria,0.0,1.0,Slovenia,30325.0,0.0,0.0,BATRES Carlos (GUA),LEAL Leonel (CRC),PASTRANA Carlos (HON),ALG,SVN
+2010.0,13 Jun 2010 - 16:00 ,Group D,Serbia,0.0,1.0,Ghana,38833.0,0.0,0.0,BALDASSI Hector (ARG),CASAS Ricardo (ARG),MAIDANA Hernan (ARG),SRB,GHA
+2010.0,13 Jun 2010 - 20:30 ,Group D,Germany,4.0,0.0,Australia,62660.0,2.0,0.0,RODRIGUEZ Marco (MEX),CAMARGO Jose Luis (MEX),MORIN Alberto (MEX),GER,AUS
+2010.0,14 Jun 2010 - 13:30 ,Group E,Netherlands,2.0,0.0,Denmark,83465.0,0.0,0.0,St�phane LANNOY (FRA),DANSAULT Eric (FRA),UGO Laurent (FRA),NED,DEN
+2010.0,14 Jun 2010 - 16:00 ,Group E,Japan,1.0,0.0,Cameroon,30620.0,1.0,0.0,Oleg�rio BENQUEREN�A (POR),CARDINAL Jose (POR),MIRANDA Bertino (POR),JPN,CMR
+2010.0,14 Jun 2010 - 20:30 ,Group F,Italy,1.0,1.0,Paraguay,62869.0,0.0,1.0,ARCHUNDIA Benito (MEX),VERGARA Hector (CAN),TORRENTERA Marvin (MEX),ITA,PAR
+2010.0,15 Jun 2010 - 13:30 ,Group F,New Zealand,1.0,1.0,Slovakia,23871.0,0.0,0.0,DAMON Jerome (RSA),NTAGUNGIRA Celestin (RWA),MOLEFE Enock (RSA),NZL,SVK
+2010.0,15 Jun 2010 - 16:00 ,Group G,C�te d'Ivoire,0.0,0.0,Portugal,37034.0,0.0,0.0,LARRIONDA Jorge (URU),FANDINO Pablo (URU),ESPINOSA Mauricio (URU),CIV,POR
+2010.0,15 Jun 2010 - 20:30 ,Group G,Brazil,2.0,1.0,Korea DPR,54331.0,0.0,0.0,KASSAI Viktor (HUN),EROS Gabor (HUN),VAMOS Tibor (HUN),BRA,PRK
+2010.0,16 Jun 2010 - 13:30 ,Group H,Honduras,0.0,1.0,Chile,32664.0,0.0,1.0,MAILLET Eddy (SEY),MENKOUANDE Evarist (CMR),HASSANI Bechir (TUN),HON,CHI
+2010.0,16 Jun 2010 - 16:00 ,Group H,Spain,0.0,1.0,Switzerland,62453.0,0.0,0.0,WEBB Howard (ENG),Darren CANN (ENG),MULLARKEY Michael (ENG),ESP,SUI
+2010.0,16 Jun 2010 - 20:30 ,Group A,South Africa,0.0,3.0,Uruguay,42658.0,0.0,1.0,BUSACCA Massimo (SUI),ARNET Matthias (SUI),BURAGINA Francesco (SUI),RSA,URU
+2010.0,17 Jun 2010 - 13:30 ,Group B,Argentina,4.0,1.0,Korea Republic,82174.0,2.0,1.0,DE BLEECKERE Frank (BEL),HERMANS Peter (BEL),VROMANS Walter (BEL),ARG,KOR
+2010.0,17 Jun 2010 - 16:00 ,Group B,Greece,2.0,1.0,Nigeria,31593.0,1.0,1.0,RUIZ Oscar (COL),GONZALEZ Abraham (COL),CLAVIJO Humberto (COL),GRE,NGA
+2010.0,17 Jun 2010 - 20:30 ,Group A,France,0.0,2.0,Mexico,35370.0,0.0,0.0,AL GHAMDI Khalil (KSA),KAMRANIFAR Hassan (IRN),AL MARZOUQI Saleh (UAE),FRA,MEX
+2010.0,18 Jun 2010 - 13:30 ,Group D,Germany,0.0,1.0,Serbia,38294.0,0.0,1.0,Alberto UNDIANO MALLENCO (ESP),MARTINEZ Fermin (ESP),YUSTE Juan (ESP),GER,SRB
+2010.0,18 Jun 2010 - 16:00 ,Group C,Slovenia,2.0,2.0,USA,45573.0,2.0,0.0,Koman COULIBALY (MLI),ACHIK Redouane (MAR),MANUEL CANDIDO Inacio (ANG),SVN,USA
+2010.0,18 Jun 2010 - 20:30 ,Group C,England,0.0,0.0,Algeria,64100.0,0.0,0.0,Ravshan IRMATOV (UZB),ILYASOV Rafael (UZB),KOCHKAROV Bakhadyr (KGZ),ENG,ALG
+2010.0,19 Jun 2010 - 13:30 ,Group E,Netherlands,1.0,0.0,Japan,62010.0,0.0,0.0,BALDASSI Hector (ARG),CASAS Ricardo (ARG),MAIDANA Hernan (ARG),NED,JPN
+2010.0,19 Jun 2010 - 16:00 ,Group D,Ghana,1.0,1.0,Australia,34812.0,1.0,1.0,ROSETTI Roberto (ITA),CALCAGNO Paolo (ITA),AYROLDI Stefano (ITA),GHA,AUS
+2010.0,19 Jun 2010 - 20:30 ,Group E,Cameroon,1.0,2.0,Denmark,38074.0,1.0,1.0,LARRIONDA Jorge (URU),FANDINO Pablo (URU),ESPINOSA Mauricio (URU),CMR,DEN
+2010.0,20 Jun 2010 - 13:30 ,Group F,Slovakia,0.0,2.0,Paraguay,26643.0,0.0,1.0,MAILLET Eddy (SEY),MENKOUANDE Evarist (CMR),HASSANI Bechir (TUN),SVK,PAR
+2010.0,20 Jun 2010 - 16:00 ,Group F,Italy,1.0,1.0,New Zealand,38229.0,1.0,1.0,BATRES Carlos (GUA),LEAL Leonel (CRC),PASTRANA Carlos (HON),ITA,NZL
+2010.0,20 Jun 2010 - 20:30 ,Group G,Brazil,3.0,1.0,C�te d'Ivoire,84455.0,1.0,0.0,St�phane LANNOY (FRA),DANSAULT Eric (FRA),UGO Laurent (FRA),BRA,CIV
+2010.0,21 Jun 2010 - 13:30 ,Group G,Portugal,7.0,0.0,Korea DPR,63644.0,1.0,0.0,POZO Pablo (CHI),BASUALTO Patricio (CHI),MONDRIA Francisco (CHI),POR,PRK
+2010.0,21 Jun 2010 - 16:00 ,Group H,Chile,1.0,0.0,Switzerland,34872.0,0.0,0.0,AL GHAMDI Khalil (KSA),KAMRANIFAR Hassan (IRN),AL MARZOUQI Saleh (UAE),CHI,SUI
+2010.0,21 Jun 2010 - 20:30 ,Group H,Spain,2.0,0.0,Honduras,54386.0,1.0,0.0,NISHIMURA Yuichi (JPN),SAGARA Toru (JPN),JEONG Hae Sang (KOR),ESP,HON
+2010.0,22 Jun 2010 - 16:00 ,Group A,Mexico,0.0,1.0,Uruguay,33425.0,0.0,1.0,KASSAI Viktor (HUN),EROS Gabor (HUN),VAMOS Tibor (HUN),MEX,URU
+2010.0,22 Jun 2010 - 16:00 ,Group A,France,1.0,2.0,South Africa,39415.0,0.0,2.0,RUIZ Oscar (COL),GONZALEZ Abraham (COL),CLAVIJO Humberto (COL),FRA,RSA
+2010.0,22 Jun 2010 - 20:30 ,Group B,Nigeria,2.0,2.0,Korea Republic,61874.0,1.0,1.0,Oleg�rio BENQUEREN�A (POR),CARDINAL Jose (POR),MIRANDA Bertino (POR),NGA,KOR
+2010.0,22 Jun 2010 - 20:30 ,Group B,Greece,0.0,2.0,Argentina,38891.0,0.0,0.0,Ravshan IRMATOV (UZB),ILYASOV Rafael (UZB),KOCHKAROV Bakhadyr (KGZ),GRE,ARG
+2010.0,23 Jun 2010 - 16:00 ,Group C,Slovenia,0.0,1.0,England,36893.0,0.0,1.0,Wolfgang STARK (GER),SALVER Jan-Hendrik (GER),PICKEL Mike (GER),SVN,ENG
+2010.0,23 Jun 2010 - 16:00 ,Group C,USA,1.0,0.0,Algeria,35827.0,0.0,0.0,DE BLEECKERE Frank (BEL),HERMANS Peter (BEL),VROMANS Walter (BEL),USA,ALG
+2010.0,23 Jun 2010 - 20:30 ,Group D,Ghana,0.0,1.0,Germany,83391.0,0.0,0.0,SIMON Carlos (BRA),HAUSMANN Altemir (BRA),BRAATZ Roberto (BRA),GHA,GER
+2010.0,23 Jun 2010 - 20:30 ,Group D,Australia,2.0,1.0,Serbia,37836.0,0.0,0.0,LARRIONDA Jorge (URU),FANDINO Pablo (URU),ESPINOSA Mauricio (URU),AUS,SRB
+2010.0,24 Jun 2010 - 16:00 ,Group F,Slovakia,3.0,2.0,Italy,53412.0,1.0,0.0,WEBB Howard (ENG),Darren CANN (ENG),MULLARKEY Michael (ENG),SVK,ITA
+2010.0,24 Jun 2010 - 16:00 ,Group F,Paraguay,0.0,0.0,New Zealand,34850.0,0.0,0.0,NISHIMURA Yuichi (JPN),SAGARA Toru (JPN),JEONG Hae Sang (KOR),PAR,NZL
+2010.0,24 Jun 2010 - 20:30 ,Group E,Denmark,1.0,3.0,Japan,27967.0,0.0,2.0,DAMON Jerome (RSA),NTAGUNGIRA Celestin (RWA),MOLEFE Enock (RSA),DEN,JPN
+2010.0,24 Jun 2010 - 20:30 ,Group E,Cameroon,1.0,2.0,Netherlands,63093.0,0.0,1.0,POZO Pablo (CHI),BASUALTO Patricio (CHI),MONDRIA Francisco (CHI),CMR,NED
+2010.0,25 Jun 2010 - 16:00 ,Group G,Portugal,0.0,0.0,Brazil,62712.0,0.0,0.0,ARCHUNDIA Benito (MEX),VERGARA Hector (CAN),TORRENTERA Marvin (MEX),POR,BRA
+2010.0,25 Jun 2010 - 16:00 ,Group G,Korea DPR,0.0,3.0,C�te d'Ivoire,34763.0,0.0,2.0,Alberto UNDIANO MALLENCO (ESP),MARTINEZ Fermin (ESP),YUSTE Juan (ESP),PRK,CIV
+2010.0,25 Jun 2010 - 20:30 ,Group H,Chile,1.0,2.0,Spain,41958.0,0.0,2.0,RODRIGUEZ Marco (MEX),CAMARGO Jose Luis (MEX),MORIN Alberto (MEX),CHI,ESP
+2010.0,25 Jun 2010 - 20:30 ,Group H,Switzerland,0.0,0.0,Honduras,28042.0,0.0,0.0,BALDASSI Hector (ARG),CASAS Ricardo (ARG),MAIDANA Hernan (ARG),SUI,HON
+2010.0,26 Jun 2010 - 16:00 ,Round of 16,Uruguay,2.0,1.0,Korea Republic,30597.0,1.0,0.0,Wolfgang STARK (GER),SALVER Jan-Hendrik (GER),PICKEL Mike (GER),URU,KOR
+2010.0,26 Jun 2010 - 20:30 ,Round of 16,USA,1.0,2.0,Ghana,34976.0,0.0,0.0,KASSAI Viktor (HUN),EROS Gabor (HUN),VAMOS Tibor (HUN),USA,GHA
+2010.0,27 Jun 2010 - 16:00 ,Round of 16,Germany,4.0,1.0,England,40510.0,2.0,1.0,LARRIONDA Jorge (URU),FANDINO Pablo (URU),ESPINOSA Mauricio (URU),GER,ENG
+2010.0,27 Jun 2010 - 20:30 ,Round of 16,Argentina,3.0,1.0,Mexico,84377.0,2.0,0.0,ROSETTI Roberto (ITA),CALCAGNO Paolo (ITA),AYROLDI Stefano (ITA),ARG,MEX
+2010.0,28 Jun 2010 - 16:00 ,Round of 16,Netherlands,2.0,1.0,Slovakia,61962.0,1.0,0.0,Alberto UNDIANO MALLENCO (ESP),MARTINEZ Fermin (ESP),YUSTE Juan (ESP),NED,SVK
+2010.0,28 Jun 2010 - 20:30 ,Round of 16,Brazil,3.0,0.0,Chile,54096.0,2.0,0.0,WEBB Howard (ENG),Darren CANN (ENG),MULLARKEY Michael (ENG),BRA,CHI
+2010.0,29 Jun 2010 - 16:00 ,Round of 16,Paraguay,0.0,0.0,Japan,36742.0,0.0,0.0,DE BLEECKERE Frank (BEL),HERMANS Peter (BEL),VROMANS Walter (BEL),PAR,JPN
+2010.0,29 Jun 2010 - 20:30 ,Round of 16,Spain,1.0,0.0,Portugal,62955.0,0.0,0.0,BALDASSI Hector (ARG),CASAS Ricardo (ARG),MAIDANA Hernan (ARG),ESP,POR
+2010.0,02 Jul 2010 - 16:00 ,Quarter-finals,Netherlands,2.0,1.0,Brazil,40186.0,0.0,1.0,NISHIMURA Yuichi (JPN),SAGARA Toru (JPN),JEONG Hae Sang (KOR),NED,BRA
+2010.0,02 Jul 2010 - 20:30 ,Quarter-finals,Uruguay,1.0,1.0,Ghana,84017.0,0.0,0.0,Oleg�rio BENQUEREN�A (POR),CARDINAL Jose (POR),MIRANDA Bertino (POR),URU,GHA
+2010.0,03 Jul 2010 - 16:00 ,Quarter-finals,Argentina,0.0,4.0,Germany,64100.0,0.0,1.0,Ravshan IRMATOV (UZB),ILYASOV Rafael (UZB),KOCHKAROV Bakhadyr (KGZ),ARG,GER
+2010.0,03 Jul 2010 - 20:30 ,Quarter-finals,Paraguay,0.0,1.0,Spain,55359.0,0.0,0.0,BATRES Carlos (GUA),LEAL Leonel (CRC),PASTRANA Carlos (HON),PAR,ESP
+2010.0,06 Jul 2010 - 20:30 ,Semi-finals,Uruguay,2.0,3.0,Netherlands,62479.0,1.0,1.0,Ravshan IRMATOV (UZB),ILYASOV Rafael (UZB),KOCHKAROV Bakhadyr (KGZ),URU,NED
+2010.0,07 Jul 2010 - 20:30 ,Semi-finals,Germany,0.0,1.0,Spain,60960.0,0.0,0.0,KASSAI Viktor (HUN),EROS Gabor (HUN),VAMOS Tibor (HUN),GER,ESP
+2010.0,10 Jul 2010 - 20:30 ,Match for third place,Uruguay,2.0,3.0,Germany,36254.0,1.0,1.0,ARCHUNDIA Benito (MEX),VERGARA Hector (CAN),TORRENTERA Marvin (MEX),URU,GER
+2010.0,11 Jul 2010 - 20:30 ,Final,Netherlands,0.0,1.0,Spain,84490.0,0.0,0.0,WEBB Howard (ENG),Darren CANN (ENG),MULLARKEY Michael (ENG),NED,ESP
+2014.0,12 Jun 2014 - 17:00 ,Group A,Brazil,3.0,1.0,Croatia,62103.0,1.0,1.0,NISHIMURA Yuichi (JPN),SAGARA Toru (JPN),NAGI Toshiyuki (JPN),BRA,CRO
+2014.0,13 Jun 2014 - 13:00 ,Group A,Mexico,1.0,0.0,Cameroon,39216.0,0.0,0.0,ROLDAN Wilmar (COL),CLAVIJO Humberto (COL),DIAZ Eduardo (COL),MEX,CMR
+2014.0,13 Jun 2014 - 16:00 ,Group B,Spain,1.0,5.0,Netherlands,48173.0,1.0,1.0,Nicola RIZZOLI (ITA),Renato FAVERANI (ITA),Andrea STEFANI (ITA),ESP,NED
+2014.0,13 Jun 2014 - 18:00 ,Group B,Chile,3.0,1.0,Australia,40275.0,2.0,1.0,Noumandiez DOUE (CIV),YEO Songuifolo (CIV),BIRUMUSHAHU Jean Claude (BDI),CHI,AUS
+2014.0,14 Jun 2014 - 13:00 ,Group C,Colombia,3.0,0.0,Greece,57174.0,1.0,0.0,GEIGER Mark (USA),HURD Sean (USA),FLETCHER Joe (CAN),COL,GRE
+2014.0,14 Jun 2014 - 16:00 ,Group D,Uruguay,1.0,3.0,Costa Rica,58679.0,1.0,0.0,BRYCH Felix (GER),BORSCH Mark (GER),LUPP Stefan (GER),URU,CRC
+2014.0,14 Jun 2014 - 18:00 ,Group D,England,1.0,2.0,Italy,39800.0,1.0,1.0,Bj�rn KUIPERS (NED),Sander VAN ROEKEL (NED),Erwin ZEINSTRA (NED),ENG,ITA
+2014.0,14 Jun 2014 - 22:00 ,Group C,C�te d'Ivoire,2.0,1.0,Japan,40267.0,0.0,1.0,OSSES Enrique (CHI),ASTROZA Carlos (CHI),ROMAN Sergio (CHI),CIV,JPN
+2014.0,15 Jun 2014 - 13:00 ,Group E,Switzerland,2.0,1.0,Ecuador,68351.0,0.0,1.0,Ravshan IRMATOV (UZB),RASULOV Abduxamidullo (UZB),KOCHKAROV Bakhadyr (KGZ),SUI,ECU
+2014.0,15 Jun 2014 - 16:00 ,Group E,France,3.0,0.0,Honduras,43012.0,1.0,0.0,RICCI Sandro (BRA),DE CARVALHO Emerson (BRA),VAN GASSE Marcelo (BRA),FRA,HON
+2014.0,15 Jun 2014 - 19:00 ,Group F,Argentina,2.0,1.0,"rn"">Bosnia and Herzegovina",74738.0,1.0,0.0,AGUILAR Joel (SLV),TORRES William (SLV),ZUMBA Juan (SLV),ARG,BIH
+2014.0,16 Jun 2014 - 13:00 ,Group G,Germany,4.0,0.0,Portugal,51081.0,3.0,0.0,MAZIC Milorad (SRB),RISTIC Milovan (SRB),DJURDJEVIC Dalibor (SRB),GER,POR
+2014.0,16 Jun 2014 - 16:00 ,Group F,IR Iran,0.0,0.0,Nigeria,39081.0,0.0,0.0,VERA Carlos (ECU),LESCANO Christian (ECU),ROMERO Byron (ECU),IRN,NGA
+2014.0,16 Jun 2014 - 19:00 ,Group G,Ghana,1.0,2.0,USA,39760.0,0.0,1.0,ERIKSSON Jonas (SWE),KLASENIUS Mathias (SWE),WARNMARK Daniel (SWE),GHA,USA
+2014.0,17 Jun 2014 - 13:00 ,Group H,Belgium,2.0,1.0,Algeria,56800.0,0.0,1.0,RODRIGUEZ Marco (MEX),TORRENTERA Marvin (MEX),QUINTERO Marcos (MEX),BEL,ALG
+2014.0,17 Jun 2014 - 16:00 ,Group A,Brazil,0.0,0.0,Mexico,60342.0,0.0,0.0,C�neyt �AKIR (TUR),DURAN Bahattin (TUR),ONGUN Tarik (TUR),BRA,MEX
+2014.0,17 Jun 2014 - 18:00 ,Group H,Russia,1.0,1.0,Korea Republic,37603.0,0.0,0.0,PITANA Nestor (ARG),MAIDANA Hernan (ARG),BELATTI Juan Pablo (ARG),RUS,KOR
+2014.0,18 Jun 2014 - 13:00 ,Group B,Australia,2.0,3.0,Netherlands,42877.0,1.0,1.0,HAIMOUDI Djamel (ALG),ACHIK Redouane (MAR),ETCHIALI Abdelhak (ALG),AUS,NED
+2014.0,18 Jun 2014 - 16:00 ,Group B,Spain,0.0,2.0,Chile,74101.0,0.0,2.0,GEIGER Mark (USA),HURD Sean (USA),FLETCHER Joe (CAN),ESP,CHI
+2014.0,18 Jun 2014 - 18:00 ,Group A,Cameroon,0.0,4.0,Croatia,39982.0,0.0,1.0,PROENCA Pedro (POR),MIRANDA Bertino (POR),TRIGO Jose (POR),CMR,CRO
+2014.0,19 Jun 2014 - 13:00 ,Group C,Colombia,2.0,1.0,C�te d'Ivoire,68748.0,0.0,0.0,WEBB Howard (ENG),MULLARKEY Michael (ENG),Darren CANN (ENG),COL,CIV
+2014.0,19 Jun 2014 - 16:00 ,Group D,Uruguay,2.0,1.0,England,62575.0,1.0,0.0,Carlos VELASCO CARBALLO (ESP),ALONSO FERNANDEZ Roberto (ESP),YUSTE Juan (ESP),URU,ENG
+2014.0,19 Jun 2014 - 19:00 ,Group C,Japan,0.0,0.0,Greece,39485.0,0.0,0.0,AGUILAR Joel (SLV),TORRES William (SLV),ZUMBA Juan (SLV),JPN,GRE
+2014.0,20 Jun 2014 - 13:00 ,Group D,Italy,0.0,1.0,Costa Rica,40285.0,0.0,1.0,OSSES Enrique (CHI),ASTROZA Carlos (CHI),ROMAN Sergio (CHI),ITA,CRC
+2014.0,20 Jun 2014 - 16:00 ,Group E,Switzerland,2.0,5.0,France,51003.0,0.0,3.0,Bj�rn KUIPERS (NED),Sander VAN ROEKEL (NED),Erwin ZEINSTRA (NED),SUI,FRA
+2014.0,20 Jun 2014 - 19:00 ,Group E,Honduras,1.0,2.0,Ecuador,39224.0,1.0,1.0,Ben WILLIAMS (AUS),CREAM Matthew (AUS),ANAZ Hakan (AUS),HON,ECU
+2014.0,21 Jun 2014 - 13:00 ,Group F,Argentina,1.0,0.0,IR Iran,57698.0,0.0,0.0,MAZIC Milorad (SRB),RISTIC Milovan (SRB),DJURDJEVIC Dalibor (SRB),ARG,IRN
+2014.0,21 Jun 2014 - 16:00 ,Group G,Germany,2.0,2.0,Ghana,59621.0,0.0,0.0,RICCI Sandro (BRA),DE CARVALHO Emerson (BRA),VAN GASSE Marcelo (BRA),GER,GHA
+2014.0,21 Jun 2014 - 18:00 ,Group F,Nigeria,1.0,0.0,"rn"">Bosnia and Herzegovina",40499.0,1.0,0.0,Peter O'LEARY (NZL),HINTZ Jan Hendrik (NZL),RULE Mark (NZL),NGA,BIH
+2014.0,22 Jun 2014 - 13:00 ,Group H,Belgium,1.0,0.0,Russia,73819.0,0.0,0.0,BRYCH Felix (GER),BORSCH Mark (GER),LUPP Stefan (GER),BEL,RUS
+2014.0,22 Jun 2014 - 16:00 ,Group H,Korea Republic,2.0,4.0,Algeria,42732.0,0.0,3.0,ROLDAN Wilmar (COL),DIAZ Eduardo (COL),LESCANO Christian (ECU),KOR,ALG
+2014.0,22 Jun 2014 - 18:00 ,Group G,USA,2.0,2.0,Portugal,40123.0,0.0,1.0,PITANA Nestor (ARG),MAIDANA Hernan (ARG),BELATTI Juan Pablo (ARG),USA,POR
+2014.0,23 Jun 2014 - 13:00 ,Group B,Australia,0.0,3.0,Spain,39375.0,0.0,1.0,SHUKRALLA Nawaf (BHR),TULEFAT Yaser (BHR),SALEH Ebrahim (BHR),AUS,ESP
+2014.0,23 Jun 2014 - 13:00 ,Group B,Netherlands,2.0,0.0,Chile,62996.0,0.0,0.0,Bakary GASSAMA (GAM),MENKOUANDE Evarist (CMR),KABANDA Felicien (RWA),NED,CHI
+2014.0,23 Jun 2014 - 17:00 ,Group A,Cameroon,1.0,4.0,Brazil,69112.0,1.0,2.0,ERIKSSON Jonas (SWE),KLASENIUS Mathias (SWE),WARNMARK Daniel (SWE),CMR,BRA
+2014.0,23 Jun 2014 - 17:00 ,Group A,Croatia,1.0,3.0,Mexico,41212.0,0.0,0.0,Ravshan IRMATOV (UZB),RASULOV Abduxamidullo (UZB),KOCHKAROV Bakhadyr (KGZ),CRO,MEX
+2014.0,24 Jun 2014 - 13:00 ,Group D,Italy,0.0,1.0,Uruguay,39706.0,0.0,0.0,RODRIGUEZ Marco (MEX),TORRENTERA Marvin (MEX),QUINTERO Marcos (MEX),ITA,URU
+2014.0,24 Jun 2014 - 13:00 ,Group D,Costa Rica,0.0,0.0,England,57823.0,0.0,0.0,HAIMOUDI Djamel (ALG),ACHIK Redouane (MAR),ETCHIALI Abdelhak (ALG),CRC,ENG
+2014.0,24 Jun 2014 - 16:00 ,Group C,Japan,1.0,4.0,Colombia,40340.0,1.0,1.0,PROENCA Pedro (POR),MIRANDA Bertino (POR),TRIGO Jose (POR),JPN,COL
+2014.0,24 Jun 2014 - 17:00 ,Group C,Greece,2.0,1.0,C�te d'Ivoire,59095.0,1.0,0.0,VERA Carlos (ECU),LESCANO Christian (ECU),ROMERO Byron (ECU),GRE,CIV
+2014.0,25 Jun 2014 - 13:00 ,Group F,Nigeria,2.0,3.0,Argentina,43285.0,1.0,2.0,Nicola RIZZOLI (ITA),Renato FAVERANI (ITA),Andrea STEFANI (ITA),NGA,ARG
+2014.0,25 Jun 2014 - 13:00 ,Group F,"rn"">Bosnia and Herzegovina",3.0,1.0,IR Iran,48011.0,1.0,0.0,Carlos VELASCO CARBALLO (ESP),ALONSO FERNANDEZ Roberto (ESP),YUSTE Juan (ESP),BIH,IRN
+2014.0,25 Jun 2014 - 16:00 ,Group E,Honduras,0.0,3.0,Switzerland,40322.0,0.0,2.0,PITANA Nestor (ARG),MAIDANA Hernan (ARG),BELATTI Juan Pablo (ARG),HON,SUI
+2014.0,25 Jun 2014 - 17:00 ,Group E,Ecuador,0.0,0.0,France,73749.0,0.0,0.0,Noumandiez DOUE (CIV),YEO Songuifolo (CIV),BIRUMUSHAHU Jean Claude (BDI),ECU,FRA
+2014.0,26 Jun 2014 - 13:00 ,Group G,USA,0.0,1.0,Germany,41876.0,0.0,0.0,Ravshan IRMATOV (UZB),RASULOV Abduxamidullo (UZB),KOCHKAROV Bakhadyr (KGZ),USA,GER
+2014.0,26 Jun 2014 - 13:00 ,Group G,Portugal,2.0,1.0,Ghana,67540.0,1.0,0.0,SHUKRALLA Nawaf (BHR),TULEFAT Yaser (BHR),SALEH Ebrahim (BHR),POR,GHA
+2014.0,26 Jun 2014 - 17:00 ,Group H,Korea Republic,0.0,1.0,Belgium,61397.0,0.0,0.0,Ben WILLIAMS (AUS),CREAM Matthew (AUS),ANAZ Hakan (AUS),KOR,BEL
+2014.0,26 Jun 2014 - 17:00 ,Group H,Algeria,1.0,1.0,Russia,39311.0,0.0,1.0,C�neyt �AKIR (TUR),DURAN Bahattin (TUR),ONGUN Tarik (TUR),ALG,RUS
+2014.0,28 Jun 2014 - 13:00 ,Round of 16,Brazil,1.0,1.0,Chile,57714.0,0.0,0.0,WEBB Howard (ENG),MULLARKEY Michael (ENG),Darren CANN (ENG),BRA,CHI
+2014.0,28 Jun 2014 - 17:00 ,Round of 16,Colombia,2.0,0.0,Uruguay,73804.0,1.0,0.0,Bj�rn KUIPERS (NED),Sander VAN ROEKEL (NED),Erwin ZEINSTRA (NED),COL,URU
+2014.0,30 Jun 2014 - 13:00 ,Round of 16,France,2.0,0.0,Nigeria,67882.0,0.0,0.0,GEIGER Mark (USA),HURD Sean (USA),FLETCHER Joe (CAN),FRA,NGA
+2014.0,04 Jul 2014 - 17:00 ,Quarter-finals,Brazil,2.0,1.0,Colombia,60342.0,1.0,0.0,Carlos VELASCO CARBALLO (ESP),ALONSO FERNANDEZ Roberto (ESP),YUSTE Juan (ESP),BRA,COL
+2014.0,04 Jul 2014 - 13:00 ,Quarter-finals,France,0.0,1.0,Germany,74240.0,0.0,1.0,PITANA Nestor (ARG),MAIDANA Hernan (ARG),BELATTI Juan Pablo (ARG),FRA,GER
+2014.0,08 Jul 2014 - 17:00 ,Semi-finals,Brazil,1.0,7.0,Germany,58141.0,0.0,5.0,RODRIGUEZ Marco (MEX),TORRENTERA Marvin (MEX),QUINTERO Marcos (MEX),BRA,GER
+2014.0,12 Jul 2014 - 17:00 ,Play-off for third place,Brazil,0.0,3.0,Netherlands,68034.0,0.0,2.0,HAIMOUDI Djamel (ALG),ACHIK Redouane (MAR),ETCHIALI Abdelhak (ALG),BRA,NED
+2014.0,13 Jul 2014 - 16:00 ,Final,Germany,1.0,0.0,Argentina,74738.0,0.0,0.0,Nicola RIZZOLI (ITA),Renato FAVERANI (ITA),Andrea STEFANI (ITA),GER,ARG
+2014.0,09 Jul 2014 - 17:00 ,Semi-finals,Netherlands,0.0,0.0,Argentina,63267.0,0.0,0.0,C�neyt �AKIR (TUR),DURAN Bahattin (TUR),ONGUN Tarik (TUR),NED,ARG
+2014.0,05 Jul 2014 - 17:00 ,Quarter-finals,Netherlands,0.0,0.0,Costa Rica,51179.0,0.0,0.0,Ravshan IRMATOV (UZB),RASULOV Abduxamidullo (UZB),KOCHKAROV Bakhadyr (KGZ),NED,CRC
+2014.0,05 Jul 2014 - 13:00 ,Quarter-finals,Argentina,1.0,0.0,Belgium,68551.0,1.0,0.0,Nicola RIZZOLI (ITA),Renato FAVERANI (ITA),Andrea STEFANI (ITA),ARG,BEL
+2014.0,29 Jun 2014 - 13:00 ,Round of 16,Netherlands,2.0,1.0,Mexico,58817.0,0.0,0.0,PROENCA Pedro (POR),MIRANDA Bertino (POR),TRIGO Jose (POR),NED,MEX
+2014.0,29 Jun 2014 - 17:00 ,Round of 16,Costa Rica,1.0,1.0,Greece,41242.0,0.0,0.0,Ben WILLIAMS (AUS),CREAM Matthew (AUS),ANAZ Hakan (AUS),CRC,GRE
+2014.0,01 Jul 2014 - 13:00 ,Round of 16,Argentina,1.0,0.0,Switzerland,63255.0,0.0,0.0,ERIKSSON Jonas (SWE),KLASENIUS Mathias (SWE),WARNMARK Daniel (SWE),ARG,SUI
+2014.0,01 Jul 2014 - 17:00 ,Round of 16,Belgium,2.0,1.0,USA,51227.0,0.0,0.0,HAIMOUDI Djamel (ALG),ACHIK Redouane (MAR),ETCHIALI Abdelhak (ALG),BEL,USA
+2014.0,28 Jun 2014 - 13:00 ,Round of 16,Brazil,1.0,1.0,Chile,57714.0,0.0,0.0,WEBB Howard (ENG),MULLARKEY Michael (ENG),Darren CANN (ENG),BRA,CHI
+2014.0,28 Jun 2014 - 17:00 ,Round of 16,Colombia,2.0,0.0,Uruguay,73804.0,1.0,0.0,Bj�rn KUIPERS (NED),Sander VAN ROEKEL (NED),Erwin ZEINSTRA (NED),COL,URU
+2014.0,29 Jun 2014 - 13:00 ,Round of 16,Netherlands,2.0,1.0,Mexico,58817.0,0.0,0.0,PROENCA Pedro (POR),MIRANDA Bertino (POR),TRIGO Jose (POR),NED,MEX
+2014.0,29 Jun 2014 - 17:00 ,Round of 16,Costa Rica,1.0,1.0,Greece,41242.0,0.0,0.0,Ben WILLIAMS (AUS),CREAM Matthew (AUS),ANAZ Hakan (AUS),CRC,GRE
+2014.0,30 Jun 2014 - 13:00 ,Round of 16,France,2.0,0.0,Nigeria,67882.0,0.0,0.0,GEIGER Mark (USA),HURD Sean (USA),FLETCHER Joe (CAN),FRA,NGA
+2014.0,01 Jul 2014 - 13:00 ,Round of 16,Argentina,1.0,0.0,Switzerland,63255.0,0.0,0.0,ERIKSSON Jonas (SWE),KLASENIUS Mathias (SWE),WARNMARK Daniel (SWE),ARG,SUI
+2014.0,01 Jul 2014 - 17:00 ,Round of 16,Belgium,2.0,1.0,USA,51227.0,0.0,0.0,HAIMOUDI Djamel (ALG),ACHIK Redouane (MAR),ETCHIALI Abdelhak (ALG),BEL,USA
+2014.0,04 Jul 2014 - 13:00 ,Quarter-finals,France,0.0,1.0,Germany,74240.0,0.0,1.0,PITANA Nestor (ARG),MAIDANA Hernan (ARG),BELATTI Juan Pablo (ARG),FRA,GER
+2014.0,04 Jul 2014 - 17:00 ,Quarter-finals,Brazil,2.0,1.0,Colombia,60342.0,1.0,0.0,Carlos VELASCO CARBALLO (ESP),ALONSO FERNANDEZ Roberto (ESP),YUSTE Juan (ESP),BRA,COL
+2014.0,05 Jul 2014 - 13:00 ,Quarter-finals,Argentina,1.0,0.0,Belgium,68551.0,1.0,0.0,Nicola RIZZOLI (ITA),Renato FAVERANI (ITA),Andrea STEFANI (ITA),ARG,BEL
+2014.0,05 Jul 2014 - 17:00 ,Quarter-finals,Netherlands,0.0,0.0,Costa Rica,51179.0,0.0,0.0,Ravshan IRMATOV (UZB),RASULOV Abduxamidullo (UZB),KOCHKAROV Bakhadyr (KGZ),NED,CRC
+2014.0,08 Jul 2014 - 17:00 ,Semi-finals,Brazil,1.0,7.0,Germany,58141.0,0.0,5.0,RODRIGUEZ Marco (MEX),TORRENTERA Marvin (MEX),QUINTERO Marcos (MEX),BRA,GER
+2014.0,09 Jul 2014 - 17:00 ,Semi-finals,Netherlands,0.0,0.0,Argentina,63267.0,0.0,0.0,C�neyt �AKIR (TUR),DURAN Bahattin (TUR),ONGUN Tarik (TUR),NED,ARG
+2014.0,12 Jul 2014 - 17:00 ,Play-off for third place,Brazil,0.0,3.0,Netherlands,68034.0,0.0,2.0,HAIMOUDI Djamel (ALG),ACHIK Redouane (MAR),ETCHIALI Abdelhak (ALG),BRA,NED
+2014.0,13 Jul 2014 - 16:00 ,Final,Germany,1.0,0.0,Argentina,74738.0,0.0,0.0,Nicola RIZZOLI (ITA),Renato FAVERANI (ITA),Andrea STEFANI (ITA),GER,ARG
