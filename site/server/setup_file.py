@@ -9,11 +9,6 @@ date = datetime.date.today()
 
 matches = []
 for match in get_next_day_matches(int(date.day - 14)+3):
-    if match.home == "IR Iran":
-        match.home = "Iran"
-    if match.away == "IR Iran":
-        match.away = "Iran"
-
     probs = predict_proba(
         match.home,
         match.away
