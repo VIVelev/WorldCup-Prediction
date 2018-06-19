@@ -5,10 +5,10 @@ from pprint import pprint
 import numpy as np
 import pandas as pd
 
-from .mean_stats import get_average_goals, find_rank
+from .mean_stats import find_rank, get_average_goals
 
 __all__ = [
-    "log_model",
+    "model",
     "team_name_encoder",
     "predict_proba",
 ]
@@ -17,8 +17,8 @@ __all__ = [
 DIR = os.path.abspath(os.path.dirname(__file__))
 
 # # # LOAD ML Utils # # #
-with open(os.path.join(DIR, "./ml_data/log_model.b"), "rb") as f:
-    log_model = pickle.load(f)
+with open(os.path.join(DIR, "./ml_data/model.b"), "rb") as f:
+    model = pickle.load(f)
 
 with open(os.path.join(DIR, "./ml_data/team_name_encoder.b"), "rb") as f:
     team_name_encoder = pickle.load(f)
@@ -30,12 +30,14 @@ def predict_proba(home_team_name, away_team_name):
         "Home Team Name",
 
         "home_rank",
+        "home_total_points",
         "home_cur_year_avg",
-        "home_last_year_avg",
+        "home_cur_year_avg_weighted",
         
         "away_rank",
+        "away_total_points",
         "away_cur_year_avg",
-        "away_last_year_avg",
+        "away_cur_year_avg_weighted",
         
         "Home Avg Goals",
         "Away Avg Goals"
@@ -51,15 +53,17 @@ def predict_proba(home_team_name, away_team_name):
     home_team_rank = find_rank(home_team_name, 2018)
     away_team_rank = find_rank(away_team_name, 2018)
 
-    # home_rank, home_cur_year_avg, home_last_year_avg
+    # home_rank, home_total_points, home_cur_year_avg, home_cur_year_avg_weighted
     data.append(home_team_rank["rank"])
+    data.append(home_team_rank["total_points"])
     data.append(home_team_rank["cur_year_avg"])
-    data.append(home_team_rank["last_year_avg"])
+    data.append(home_team_rank["cur_year_avg_weighted"])
 
-    # away_rank, away_cur_year_avg, away_last_year_avg
+    # away_rank, away_total_points, away_cur_year_avg, away_cur_year_avg_weighted
     data.append(away_team_rank["rank"])
+    data.append(away_team_rank["total_points"])
     data.append(away_team_rank["cur_year_avg"])
-    data.append(away_team_rank["last_year_avg"])
+    data.append(away_team_rank["cur_year_avg_weighted"])
 
     # Avg Goals
     avg_goals = get_average_goals(home_team_name, away_team_name, 2018)
@@ -81,4 +85,4 @@ def predict_proba(home_team_name, away_team_name):
     # 0 -> Draw
     # 1 -> Home
     # 2 -> Away
-    return log_model.predict_proba(df)[0]
+    return model.predict_proba(df)[0]
