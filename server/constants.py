@@ -15,6 +15,7 @@ country_codes = {
     "Saudi Arabia": "sa",
     "Uruguay": "uy",
     
+    "IR Iran": "ir",
     "Iran": "ir",
     "Morocco": "ma",
     "Portugal": "pt",
@@ -60,7 +61,7 @@ team_players = {
     
     "Uruguay": ["Fernando Muslera", "José Giménez", "Diego Godín", "Guillermo Varela", "Carlos Sánchez", "Rodrigo Bentancur", "Cristian Rodríguez", "Nahitan Nández", "Luis Suárez", "Giorgian De Arrascaeta", "Cristhian Stuani", "Martín Campaña", "Gastón Silva", "Lucas Torreira", "Matías Vecino", "Maxi Pereira", "Diego Laxalt", "Maxi Gómez", "Sebastián Coates", "Jonathan Urretaviscaya", "Edinson Cavani", "Martín Cáceres", "Martín Silva"], 
     
-    "Iran": ["Alireza Beiranvand", "Mehdi Torabi", "Ehsan Hajsafi", "Rouzbeh Cheshmi", "Milad Mohammadi", "Saeid Ezatolahi", "Masoud Shojaei", "Morteza Pouraliganji", "Omid Ebrahimi", "Karim Ansarifard", "Vahid Amiri", "Mohammad Rashid Mazaheri", "Mohammad Reza Khanzadeh", "Saman Ghoddos", "Pejman Montazeri", "Reza Ghoochannejhad", "Mehdi Taremi", "Alireza Jahanbakhsh", "Majid Hosseini", "Sardar Azmoun", "Ashkan Dejagah", "Amir Abedzadeh", "Ramin Rezaeian"], 
+    "IR Iran": ["Alireza Beiranvand", "Mehdi Torabi", "Ehsan Hajsafi", "Rouzbeh Cheshmi", "Milad Mohammadi", "Saeid Ezatolahi", "Masoud Shojaei", "Morteza Pouraliganji", "Omid Ebrahimi", "Karim Ansarifard", "Vahid Amiri", "Mohammad Rashid Mazaheri", "Mohammad Reza Khanzadeh", "Saman Ghoddos", "Pejman Montazeri", "Reza Ghoochannejhad", "Mehdi Taremi", "Alireza Jahanbakhsh", "Majid Hosseini", "Sardar Azmoun", "Ashkan Dejagah", "Amir Abedzadeh", "Ramin Rezaeian"], 
     
     "Morocco": ["Yassine Bounou", "Achraf Hakimi", "Hamza Mendyl", "Manuel da Costa", "Medhi Benatia", "Romain Saïss", "Hakim Ziyech", "Karim El Ahmadi", "Ayoub El Kaabi", "Younès Belhanda", "Fayçal Fajr", "Munir Mohamedi", "Khalid Boutaïb", "Mbark Boussoufa", "Youssef Aït Bennasser", "Nordin Amrabat", "Nabil Dirar", "Amine Harit", "Youssef En-Nesyri", "Aziz Bouhaddouz", "Sofyan Amrabat", "Ahmed Reda Tagnaouti", "Mehdi Carcela"], 
     
