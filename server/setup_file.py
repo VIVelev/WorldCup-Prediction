@@ -8,7 +8,7 @@ from scraping import get_next_day_matches
 date = datetime.date.today()
 
 matches = []
-for match in get_next_day_matches(int(date.day - 14)+3):
+for match in get_next_day_matches(int(date.day)+3):
     probs = predict_proba(
         match.home,
         match.away
