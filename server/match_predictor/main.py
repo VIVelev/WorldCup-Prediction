@@ -24,7 +24,17 @@ with open(os.path.join(DIR, "./ml_data/team_name_encoder.b"), "rb") as f:
     team_name_encoder = pickle.load(f)
 # # # # # # # # # # # # #
 
+# # # LOAD 2018 MATCHES # # #
+with open(os.path.join(DIR, "../matches.b"), "rb") as f:
+    matches = pickle.load(f)
+# # # # # # # # # # # # # # #
+
+def train():
+    print(matches[0].home_goals)
+
 def predict_proba(home_team_name, away_team_name):
+    train()
+
     feature_names = [
         "Away Team Name",
         "Home Team Name",
