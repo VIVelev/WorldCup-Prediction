@@ -29,7 +29,5 @@ for i in range(len(matches)):
         matches[i].avg_goals_home = 0.0
         matches[i].avg_goals_away = 0.0
 
-    matches.append(matches[i])
-
 with open("matches.b", "wb") as f:
     pickle.dump(matches, f)
